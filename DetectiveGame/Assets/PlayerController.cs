@@ -8,6 +8,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject magGlass;
     [SerializeField] private GameObject magCam;
 
+    [SerializeField] private GameObject table;
+    [SerializeField] Transform tPosTable;
+    [SerializeField] Transform tPosFull;
+    [SerializeField] Transform tPosInterview;
+
+    public enum State
+    {
+        interview,
+        full,
+        table
+    } 
+    public State state;
+
     void Start()
     {
         magGlass.SetActive(false);
@@ -15,7 +28,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftAlt))
+        // Magnifying glass
+        if (Input.GetKey(KeyCode.LeftAlt) && state == State.table)
         {
             magGlass.SetActive(true);
             magGlass.transform.position = Input.mousePosition;
@@ -23,6 +37,51 @@ public class PlayerController : MonoBehaviour
         } else
         {
             magGlass.SetActive(false);
+        }
+
+        SwitchPerspective();
+    }
+
+    private void SwitchPerspective()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (state != State.interview)
+            {
+                state--;
+                Move();
+            }
+        }
+                
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (state != State.table)
+            {
+                state++;
+                Move();
+            }
+        }
+    }
+
+    private void Move()
+    {
+        if (state == State.interview)
+        {
+            table.transform.position = tPosInterview.position;
+            table.transform.rotation = tPosInterview.rotation;
+            Camera.main.orthographic = false;
+        }
+        else if (state == State.full)
+        {
+            table.transform.position = tPosFull.position;
+            table.transform.rotation = tPosFull.rotation;
+            Camera.main.orthographic = false;
+        }
+        else if (state == State.table)
+        {
+            table.transform.position = tPosTable.position;
+            table.transform.rotation = tPosTable.rotation;
+            Camera.main.orthographic = true;
         }
     }
 }
