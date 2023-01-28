@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform tPosFull;
     [SerializeField] Transform tPosInterview;
 
+    [SerializeField] private GameObject heldEvidence;
+
     public enum State
     {
         interview,
@@ -83,5 +85,26 @@ public class PlayerController : MonoBehaviour
             table.transform.rotation = tPosTable.rotation;
             Camera.main.orthographic = true;
         }
+    }
+
+    public void PickupEvidence(GameObject evidence)
+    {
+        heldEvidence = evidence;
+        Debug.Log("Picked up " + evidence.name);
+    }
+    public void DropEvidence()
+    {
+        if (heldEvidence == null)
+            return;
+
+        heldEvidence.GetComponent<Interactable>().isDragging = false;
+
+        Debug.Log("dropped " + heldEvidence.name);
+        heldEvidence = null;
+    }
+
+    public GameObject GetEvidence()
+    {
+        return heldEvidence;
     }
 }

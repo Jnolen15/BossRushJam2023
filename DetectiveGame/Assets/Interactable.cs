@@ -11,11 +11,14 @@ public class Interactable : MonoBehaviour,
     IEndDragHandler
 {
     private TableManager tm;
-    [SerializeField] private bool isDragging;
+    public bool isDragging;
+    [SerializeField] private PlayerController pc;
 
     private void Start()
     {
         tm = GetComponentInParent<TableManager>();
+
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -50,16 +53,20 @@ public class Interactable : MonoBehaviour,
         //Debug.Log("Start dragging");
         tm.BringToTop(this.transform);
         isDragging = true;
+
+        pc.PickupEvidence(this.gameObject);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        this.transform.position = eventData.pointerCurrentRaycast.worldPosition;
+        if(isDragging)
+            this.transform.position = eventData.pointerCurrentRaycast.worldPosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         //Debug.Log("Let go");
         isDragging = false;
+        pc.DropEvidence();
     }
 }
