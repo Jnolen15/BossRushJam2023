@@ -16,8 +16,8 @@ public class Menu_Manager : MonoBehaviour
     void Start()
     {
         MainMenu.SetActive(true);
-        SettingsMenu.SetActive(false);
-        CreditsMenu.SetActive(false);
+        SettingsMenu.SetActive(true);
+        CreditsMenu.SetActive(true);
         CurrentMenu = MainMenu;
     }
 
