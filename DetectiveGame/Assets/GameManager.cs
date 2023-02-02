@@ -6,11 +6,14 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI DocName; // This is just for testing
+    [SerializeField] private TextMeshProUGUI Rounds; // This is just for testing
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject lostScreen;
     public float roundTime;
     public float looseScore;
     public float winScore;
+    public int numInteractions;
+    public int curInteraction;
     private ScoreManager score;
     private PresentZone presentZone;
     public Transform[] Documents;
@@ -32,10 +35,19 @@ public class GameManager : MonoBehaviour
             roundTime -= Time.deltaTime;
             //CurScore -= Time.deltaTime;
         }
-        else if (score.CurScore > winScore)
+        else if (score.CurScore >= winScore)
             Win();
         else
             Lose();
+
+        // Interactions
+        if (curInteraction > numInteractions)
+        {
+            if (score.CurScore >= winScore)
+                Win();
+            else
+                Lose();
+        }
     }
 
     private void RequestDocument()
@@ -59,6 +71,8 @@ public class GameManager : MonoBehaviour
             score.Failed();
         }
 
+        curInteraction++;
+        Rounds.text = (curInteraction.ToString() + '/' + numInteractions.ToString());
         presentZone.Eject();
         RequestDocument();
     }
