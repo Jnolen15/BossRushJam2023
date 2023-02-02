@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     public void PickupEvidence(GameObject evidence)
     {
         heldEvidence = evidence;
-        Debug.Log("Picked up " + evidence.name);
+        //Debug.Log("Picked up " + evidence.name);
     }
     public void DropEvidence()
     {
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
         heldEvidence.GetComponent<Interactable>().isDragging = false;
 
-        Debug.Log("dropped " + heldEvidence.name);
+        //Debug.Log("dropped " + heldEvidence.name);
         heldEvidence = null;
     }
 

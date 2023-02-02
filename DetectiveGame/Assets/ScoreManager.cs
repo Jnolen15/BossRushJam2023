@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    private GameManager gm;
     [SerializeField] private Image scorebar;
     [SerializeField] private Image loosebar;
     [SerializeField] private Image winbar;
-    [SerializeField] private float roundTime;
     [SerializeField] private int maxScore;
-    [SerializeField] private float looseScore;
-    [SerializeField] private float winScore;
     [SerializeField] private int startScore;
     [SerializeField] private float curScore;
+    [SerializeField] private bool hasLost;
+    [SerializeField] private bool hasWon;
     public float CurScore
     {
         get { return curScore; }
@@ -21,40 +21,35 @@ public class ScoreManager : MonoBehaviour
         {
             curScore = value;
             scorebar.fillAmount = curScore / maxScore;
-            Debug.Log((curScore / maxScore));
         }
     }
 
     void Start()
     {
+        gm = this.GetComponent<GameManager>();
+
         CurScore = startScore;
 
-        loosebar.fillAmount = looseScore / maxScore;
-        winbar.fillAmount = winScore / maxScore;
+        loosebar.fillAmount = gm.looseScore / maxScore;
+        winbar.fillAmount = gm.winScore / maxScore;
     }
 
     void Update()
     {
-        // Timer
-        if (roundTime > 0)
+        if(!hasLost || !hasWon)
         {
-            roundTime -= Time.deltaTime;
-            //CurScore -= Time.deltaTime;
-        }
-        else
-            Debug.Log("LOST");
+            // For testing
+            if (Input.GetKeyDown(KeyCode.J))
+                Succeeded();
 
-        // For testing
-        if (Input.GetKeyDown(KeyCode.J))
-            Succeeded();
-        
-        if (Input.GetKeyDown(KeyCode.K))
-            Failed();
+            if (Input.GetKeyDown(KeyCode.K))
+                Failed();
 
-        // Loosing
-        if (curScore < looseScore)
-        {
-            Debug.Log("LOST");
+            // Losing
+            if (curScore < gm.looseScore)
+            {
+                gm.Lose();
+            }
         }
     }
 
