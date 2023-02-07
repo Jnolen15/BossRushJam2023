@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         score = this.GetComponent<ScoreManager>();
         presentZone = GameObject.FindGameObjectWithTag("PresentZone").GetComponent<PresentZone>();
 
-        RequestDocument();
+        //RequestRandomDocument();
     }
 
     private void Update()
@@ -50,11 +50,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void RequestDocument()
+    private void RequestRandomDocument()
     {
         var rand = Random.Range(0, Documents.Length);
         var doc = Documents[rand];
 
+        DocName.text = doc.name;
+        correctDoc = doc;
+    }
+
+    public void RequestDocument(Transform doc)
+    {
         DocName.text = doc.name;
         correctDoc = doc;
     }
@@ -74,7 +80,7 @@ public class GameManager : MonoBehaviour
         curInteraction++;
         Rounds.text = (curInteraction.ToString() + '/' + numInteractions.ToString());
         presentZone.Eject();
-        RequestDocument();
+        //RequestRandomDocument();
     }
 
     public void Lose()
