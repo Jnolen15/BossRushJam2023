@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         score = this.GetComponent<ScoreManager>();
         presentZone = GameObject.FindGameObjectWithTag("PresentZone").GetComponent<PresentZone>();
 
-        //RequestRandomDocument();
+        RequestRandomDocument();
     }
 
     private void Update()
@@ -77,22 +77,22 @@ public class GameManager : MonoBehaviour
             score.Failed();
         }
 
-        curInteraction++;
+        /*curInteraction++;
         Rounds.text = (curInteraction.ToString() + '/' + numInteractions.ToString());
         presentZone.Eject();
-        //RequestRandomDocument();
+        RequestRandomDocument();*/
     }
 
     public void Lose()
     {
-        Debug.Log("LOST");
+        //Debug.Log("LOST");
         lostScreen.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void Win()
     {
-        Debug.Log("Won!");
+        //Debug.Log("Won!");
         winScreen.SetActive(true);
         Time.timeScale = 0;
     }

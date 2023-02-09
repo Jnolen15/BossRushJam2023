@@ -67,22 +67,24 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        DropEvidence();
+
         if (state == State.interview)
         {
-            table.transform.position = tPosInterview.position;
-            table.transform.rotation = tPosInterview.rotation;
+            Camera.main.transform.position = tPosInterview.position;
+            Camera.main.transform.rotation = tPosInterview.rotation;
             Camera.main.orthographic = false;
         }
         else if (state == State.full)
         {
-            table.transform.position = tPosFull.position;
-            table.transform.rotation = tPosFull.rotation;
+            Camera.main.transform.position = tPosFull.position;
+            Camera.main.transform.rotation = tPosFull.rotation;
             Camera.main.orthographic = false;
         }
         else if (state == State.table)
         {
-            table.transform.position = tPosTable.position;
-            table.transform.rotation = tPosTable.rotation;
+            Camera.main.transform.position = tPosTable.position;
+            Camera.main.transform.rotation = tPosTable.rotation;
             Camera.main.orthographic = true;
         }
     }
