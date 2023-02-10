@@ -1,0 +1,39 @@
+{
+	"suspects": [ 	
+		{
+		
+			"name": "Clownface McClown",
+			"normalDialogue": [
+				"Clownface McClown",
+
+				"HAHA I AM SO EVIL",
+				"I CAN NEVER BE STOPPED",
+
+				"Protag",
+
+				"Is this what I have to work with..."
+
+				
+			]
+			
+			
+			
+
+			
+		},
+		{
+		
+			"name": "Lmao Man"
+
+			
+		},
+		{
+		
+			"name": "Jim"
+
+			 		
+		}
+	
+	]
+
+}

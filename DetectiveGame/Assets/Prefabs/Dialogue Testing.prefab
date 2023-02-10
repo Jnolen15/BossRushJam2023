@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &260645902813741510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260645902813741508}
+  - component: {fileID: 260645902813741509}
+  m_Layer: 0
+  m_Name: Dialogue Testing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260645902813741508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260645902813741510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.526363, y: 71.65785, z: -13.179238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260645902813741509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260645902813741510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa02308f16b7af4a993f572e2809def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daName: {fileID: 0}
+  daDialogue: {fileID: 0}
+  daQuestions: {fileID: 0}
+  DaEvidence: 
+  evidenceWeAreUsing: 
+  evidence: []
+  allPhases:
+  - currentPhase: Setup
+    dialogueClasses:
+    - name: Evil Guy
+      sentences: Look I didn't do it
+      questions: []
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Evil Guy
+      sentences: If I did then can you prove it
+      questions:
+      - Well you tell me?
+      endOfDialogue: 0
+      endOfPhase: 0
+  - currentPhase: Phase 1
+    dialogueClasses:
+    - name: Evil Guy
+      sentences: So I go into the store and see they have pie, since I wanted something
+        different from pizza
+      questions:
+      - Pizza pie?
+      - 
+      endOfDialogue: 0
+      endOfPhase: 0
+  - currentPhase: Phase 2
+    dialogueClasses: []
+  questioningLines:
+  - Question: Well you tell me?
+    questioningLines:
+    - name: Evil Guy
+      evidence: 
+      sentences: I guess if I have no choice...
+      endOfDialogue: 0
+      endOfPhase: 1
+  - Question: What's your favorite pizza?
+    questioningLines:
+    - name: Evil Guy
+      evidence: 
+      sentences: I don't like pizza in all honesty
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Evil Guy
+      evidence: Pizza
+      sentences: But if I did I would say pepperoni
+      endOfDialogue: 0
+      endOfPhase: 0
+  - Question: Pizza pie?
+    questioningLines:
+    - name: Evil Guy
+      evidence: Pizza
+      sentences: But if I did I would say pepperoni
+      endOfDialogue: 0
+      endOfPhase: 0
+  evidenceDialogueLines:
+  - Evidence: Pizza
+    evidenceLines:
+    - name: Evil Guy
+      sentences: Man how could you have guess my true weakness
+      endOfDialogue: 0
+      endOfPhase: 1
+  - Evidence: Papers
+    evidenceLines:
+    - name: Evil Guy
+      sentences: I thought I hid those really well...
+      endOfDialogue: 0
+      endOfPhase: 1
+  - Evidence: Incorrect
+    evidenceLines:
+    - name: Evil Guy
+      sentences: What in the world are you talking about?
+      endOfDialogue: 0
+      endOfPhase: 0
+  currentDialogueFormat: 
+  currentPhaseCounter: 0
+  checkCurrentPhase: 
