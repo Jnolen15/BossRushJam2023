@@ -760,6 +760,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1649660567517305678}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: startGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menu_Manager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8176856755044365354, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_fontSize
       value: 36

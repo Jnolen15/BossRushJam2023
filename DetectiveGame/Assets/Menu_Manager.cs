@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Manager : MonoBehaviour
 {
-    public GameObject AllMenus;
     public GameObject MainMenu;
     public GameObject SettingsMenu;
     public GameObject CreditsMenu;
@@ -25,7 +24,7 @@ public class Menu_Manager : MonoBehaviour
 
     public void startGame()
     {
-        AllMenus.SetActive(false);
+        this.gameObject.SetActive(false);
         // code here to animate looking up from desk
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
