@@ -7,11 +7,12 @@ using UnityEngine.UIElements;
 public class Moused_Over : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject Highlight;
+    public GameObject FolderCover;
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         // Debug.Log("mousedOver");
         this.transform.parent.transform.parent.SetAsLastSibling();
-        // ^this is currently just changing the order of the children of the main menu
+        FolderCover.SetActive(false);
 
         Highlight.SetActive(true);
     }

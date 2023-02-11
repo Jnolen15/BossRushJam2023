@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Menu_Manager : MonoBehaviour
 {
@@ -25,7 +26,8 @@ public class Menu_Manager : MonoBehaviour
     public void startGame()
     {
         AllMenus.SetActive(false);
-        // code here to start the game
+        // code here to animate looking up from desk
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
