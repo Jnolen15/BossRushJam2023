@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public float winScore;
     public int numInteractions;
     public int curInteraction;
+    public DialogueCode suspectsDialogue;
+    public GameObject wrong;
+
     private ScoreManager score;
     private PresentZone presentZone;
     public Transform[] Documents;
@@ -65,15 +68,20 @@ public class GameManager : MonoBehaviour
         correctDoc = doc;
     }
 
-    public void SubmitDocument(Transform evidence)
+    public void SubmitDocument(GameObject evidenceWeWantToUse)
     {
-        if (evidence == correctDoc)
+        Debug.Log(evidenceWeWantToUse.name);
+        if (evidenceWeWantToUse == suspectsDialogue.holdEvidence)
         {
-            Debug.Log("CORRECT! Documents " + evidence.name + " and " + correctDoc + " match!");
+            suspectsDialogue.currentDialogueFormat = "Evidence";
+            suspectsDialogue.DisplayNextEvidenceSentence(evidenceWeWantToUse);
             score.Succeeded();
         } else
         {
-            Debug.Log("WROG! *Skull emoji* Documents " + evidence.name + " and " + correctDoc + " don't match!");
+            suspectsDialogue.currentDialogueFormat = "Evidence";
+            evidenceWeWantToUse = wrong;
+            suspectsDialogue.DisplayNextEvidenceSentence(evidenceWeWantToUse);
+            
             score.Failed();
         }
 

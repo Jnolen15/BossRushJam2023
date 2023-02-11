@@ -7,12 +7,13 @@ public class DialogueCode : MonoBehaviour
 {
     // Class that lets writers do questioning dialogue base on which line the suspect is on
     // Example: Character Dialogue [0] is Questioning Dialogue [0]
+    public GameManager gm;
     public GameObject daName;
     public GameObject daDialogue;
     public GameObject daQuestions;
     public string DaEvidence;
-    public string evidenceWeAreUsing;
-    public string[] evidence;
+    public GameObject evidenceWeAreUsing;
+    public GameObject[] evidence;
 
 
     [System.Serializable]
@@ -20,7 +21,7 @@ public class DialogueCode : MonoBehaviour
     {
         
         public string name;
-        public string evidence;
+        public GameObject evidence;
 
         [TextArea(4, 10)]
         public string sentences;
@@ -39,6 +40,7 @@ public class DialogueCode : MonoBehaviour
 
         public bool endOfDialogue;
         public bool endOfPhase;
+        public bool explodeQuestionMark;
     }
 
     // Use to make an array of array of questioningDialogue classes
@@ -51,7 +53,7 @@ public class DialogueCode : MonoBehaviour
     [System.Serializable]
     public class EvidenceSetUp
     {
-        public string Evidence;
+        public GameObject Evidence;
         public EvidenceDialogueClass[] evidenceLines;
     }
 
@@ -80,13 +82,13 @@ public class DialogueCode : MonoBehaviour
     
     // The dictionary key holds the evidence so we can do the right dilaogue if the player shows the correct evidence or wrong
     // We dod this so we can output the correct value of evidence Dialogue
-    public Dictionary<string, EvidenceDialogueClass[]> correctEvidence = new Dictionary<string, EvidenceDialogueClass[]>();
+    public Dictionary<GameObject, EvidenceDialogueClass[]> correctEvidence = new Dictionary<GameObject, EvidenceDialogueClass[]>();
 
     //private bool endingThePhase = false;
     private int forNormalLines = 0;
     private int forQuestioningLines = 0;
     private int forEvidenceLines = 0;
-    private string holdEvidence;
+    public GameObject holdEvidence;
     public string currentDialogueFormat;
     private string questionString;
     public int currentPhaseCounter = 0;
@@ -104,23 +106,23 @@ public class DialogueCode : MonoBehaviour
             correctQuestioning.Add(questioningLines[i].Question, questioningLines[i].questioningLines);
         }
         
-        for(int i = 0; i < evidence.Length; i++)
+        for(int i = 0; i < evidenceDialogueLines.Length; i++)
         {
             correctEvidence.Add(evidenceDialogueLines[i].Evidence, evidenceDialogueLines[i].evidenceLines);
         }
         
         //Debug.Log(forQuestioningDialogue.Length);
         /*
-        foreach (KeyValuePair<string, QuestioningDialogueClass[]> attachStat in correctQuestioning)
+        foreach (KeyValuePair<GameObject, EvidenceDialogueClass[]> attachStat in correctEvidence)
         {
 
             Debug.Log(attachStat.Key);
-            Debug.Log(attachStat.Value.Length);
-            foreach(QuestioningDialogueClass theQuestion in attachStat.Value)
-            {
+            //Debug.Log(attachStat.Value.Length);
+            //foreach(QuestioningDialogueClass theQuestion in attachStat.Value)
+            //{
                 //Debug.Log(theQuestion.name);
-                Debug.Log(theQuestion.sentences);
-            }
+            //    Debug.Log(theQuestion.sentences);
+            //}
             //Debug.Log(attachStat.Value);
         }
         */
@@ -157,21 +159,23 @@ public class DialogueCode : MonoBehaviour
                 //DisplayNextEvidenceSentence(characterDialogue[forNormalLines].evidence, forNormalLines, forQuestioningLines);
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                    DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
+                    DisplayNextEvidenceSentence(holdEvidence);
                 }
             break;
         }
+        /*
         if(Input.GetKeyDown(KeyCode.E) && holdEvidence == evidenceWeAreUsing)
         {
             currentDialogueFormat = "Evidence";
-            DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
+            //DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
         }
         if (Input.GetKeyDown(KeyCode.E) && (holdEvidence != evidenceWeAreUsing || holdEvidence == null))
         {
             currentDialogueFormat = "Evidence";
-            holdEvidence = "Incorrect";
-            DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
+            //holdEvidence = "Incorrect";
+            //DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
         }
+        */
         Debug.Log(holdEvidence);
 
     }
@@ -179,6 +183,7 @@ public class DialogueCode : MonoBehaviour
     {
         currentDialogueFormat = "Questioning";
         questionString = question.GetComponent<TextMeshProUGUI>().text;
+        Debug.Log(questionString);
         DisplayNextQuestioningSentence(questionString, forQuestioningLines);
     }
     public void DisplayNextSentence(int currentPhase,int nextLine)
@@ -189,7 +194,7 @@ public class DialogueCode : MonoBehaviour
         checkCurrentPhase = "Normal";
         daName.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhase].dialogueClasses[nextLine].name;
         daDialogue.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences;
-        holdEvidence = null;
+        //holdEvidence = null;
         int questionActivater = 0;
         if (allPhases[currentPhaseCounter].dialogueClasses[nextLine].questions.Length > 0)
         {
@@ -231,6 +236,7 @@ public class DialogueCode : MonoBehaviour
 
         //If we are at the end of the dialouge than return to the first line
         checkCurrentPhase = "Questioning";
+        Debug.Log(theQuestion);
         QuestioningDialogueClass[] theQuestioning = correctQuestioning[theQuestion];
         daQuestions.transform.GetChild(0).gameObject.SetActive(false);
         daQuestions.transform.GetChild(1).gameObject.SetActive(false);
@@ -263,7 +269,7 @@ public class DialogueCode : MonoBehaviour
         }
         
     }
-    public void DisplayNextEvidenceSentence(string evidence, string currentPhaseofDialogue, int nextLine)
+    public void DisplayNextEvidenceSentence(GameObject evidence)
     {
 
 
@@ -273,18 +279,18 @@ public class DialogueCode : MonoBehaviour
         daQuestions.transform.GetChild(2).gameObject.SetActive(false);
         EvidenceDialogueClass[] theEvidence = correctEvidence[evidence];
 
-        daName.GetComponent<TextMeshProUGUI>().text = theEvidence[nextLine].name;
-        daDialogue.GetComponent<TextMeshProUGUI>().text = theEvidence[nextLine].sentences;
+        daName.GetComponent<TextMeshProUGUI>().text = theEvidence[forEvidenceLines].name;
+        daDialogue.GetComponent<TextMeshProUGUI>().text = theEvidence[forEvidenceLines].sentences;
         
 
-        bool enders = theEvidence[nextLine].endOfDialogue;
-        bool endPhse = theEvidence[nextLine].endOfPhase;
+        bool enders = theEvidence[forEvidenceLines].endOfDialogue;
+        bool endPhse = theEvidence[forEvidenceLines].endOfPhase;
         if (enders)
         {
             forEvidenceLines = 0;
             forNormalLines = 0;
             forQuestioningLines = 0;
-            currentDialogueFormat = currentPhaseofDialogue;
+            currentDialogueFormat = checkCurrentPhase;
         }
         else
         {

@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &150210789985316417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150210789985316419}
+  - component: {fileID: 150210789985316418}
+  m_Layer: 0
+  m_Name: Case 3 Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150210789985316419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150210789985316417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.526363, y: 71.65785, z: -13.179238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150210789985316418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150210789985316417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa02308f16b7af4a993f572e2809def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daName: {fileID: 0}
+  daDialogue: {fileID: 0}
+  daQuestions: {fileID: 0}
+  DaEvidence: 
+  evidenceWeAreUsing: Pizza
+  evidence:
+  - Goon Testimony
+  - Crime Scene Note
+  - Pet Bunny
+  - Incorrect
+  allPhases:
+  - currentPhase: Setup
+    dialogueClasses:
+    - evidence: 
+      name: Ice Man
+      sentences: "Youse got nothin on me\r"
+      questions: []
+      endOfDialogue: 0
+      endOfPhase: 0
+    - evidence: 
+      name: Ice Man
+      sentences: Youse can't prove I was there, and youse definitely can't prove
+        I killed him. Youse don't even have a motive.
+      questions: []
+      endOfDialogue: 0
+      endOfPhase: 0
+    - evidence: 
+      name: Ice Man
+      sentences: Well officer? Why don'ts we get started.
+      questions:
+      - Where were you that night?
+      endOfDialogue: 1
+      endOfPhase: 0
+  - currentPhase: Phase 1
+    dialogueClasses:
+    - evidence: 
+      name: Ice Man
+      sentences: That night I was with my gang. I was meeting with the big boss,
+        and my underlings.
+      questions:
+      - Were you with them the whole time?
+      - Did the boss tell you to kill him?
+      endOfDialogue: 0
+      endOfPhase: 0
+  - currentPhase: Phase 2
+    dialogueClasses:
+    - evidence: 
+      name: Ice Man
+      sentences: "Look, I liked the guy. I don\u2019t even have a reason to kill
+        him!"
+      questions:
+      - Did you phone the police?
+      - Have there been any recent arguments between you two?
+      endOfDialogue: 1
+      endOfPhase: 0
+  - currentPhase: Phase 3
+    dialogueClasses:
+    - evidence: Pet Bunny
+      name: Ice Man
+      sentences: I was back at the meeting in less than 20 minutes. Where could I
+        have hidden a big ol sharpened murder weapon in that time?
+      questions: []
+      endOfDialogue: 1
+      endOfPhase: 0
+  questioningLines:
+  - Question: Where were you that night?
+    questioningLines:
+    - name: Prota
+      evidence: 
+      sentences: Where were you that night?
+      endOfDialogue: 0
+      endOfPhase: 1
+  - Question: Were you with them the whole time?
+    questioningLines:
+    - name: Protag
+      evidence: 
+      sentences: Were you with them the whole time?
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Ice Man
+      evidence: Goon Testimony
+      sentences: "Of course! The boss was talking my ear off the whole meeting, I
+        wouldn\u2019t have even had time to kill the guy."
+      endOfDialogue: 1
+      endOfPhase: 0
+  - Question: Did the boss tell you to kill him?
+    questioningLines:
+    - name: Protag
+      evidence: 
+      sentences: Did the boss tell you to kill him?
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Ice Man
+      evidence: 
+      sentences: "Nope. We weren\u2019t even talking about him at that meeting. We
+        were talking about other crime stuff."
+      endOfDialogue: 1
+      endOfPhase: 0
+  - Question: Did you phone the police?
+    questioningLines:
+    - name: Protag
+      evidence: 
+      sentences: Did you phone the police?
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Ice Man
+      evidence: 
+      sentences: You uh, you saw the gang photo right? Like a crime family? No. I
+        did not phone the police. Left that work to a more law abiding citizen.
+      endOfDialogue: 1
+      endOfPhase: 0
+  - Question: Have there been any recent arguments between you two?
+    questioningLines:
+    - name: Protag
+      evidence: 
+      sentences: Have there been any recent arguments between you two?
+      endOfDialogue: 0
+      endOfPhase: 0
+    - name: Ice Man
+      evidence: Crime Scene Note
+      sentences: "Look, I get what youse getting at. But no, we\u2019ve been good
+        buddies lately. We haven\u2019t had so much as a disagreement recently."
+      endOfDialogue: 1
+      endOfPhase: 0
+  evidenceDialogueLines:
+  - Evidence: Goon Testimony
+    evidenceLines:
+    - name: Ice Man
+      sentences: Okay okay, yeah I did have to step out of the meeting. The boss
+        told me to go say hello to our mutual friend, but he was dead when I got
+        there! Honest!
+      endOfDialogue: 0
+      endOfPhase: 1
+      explodeQuestionMark: 0
+  - Evidence: Crime Scene Note
+    evidenceLines:
+    - name: Ice Man
+      sentences: "Okay pig, let\u2019s get this straight. Yeah. I was there before
+        the killing. Yeah, we had a disagreement recently about him leaving the gang."
+      endOfDialogue: 0
+      endOfPhase: 0
+      explodeQuestionMark: 0
+    - name: Ice Man
+      sentences: But let me ask YOU something.
+      endOfDialogue: 0
+      endOfPhase: 0
+      explodeQuestionMark: 0
+    - name: Ice Man
+      sentences: "Where\u2019s the murder weapon? How youse gonna connect me to the
+        crime without that?"
+      endOfDialogue: 0
+      endOfPhase: 1
+      explodeQuestionMark: 0
+  - Evidence: Pet Bunny
+    evidenceLines:
+    - name: Ice Man
+      sentences: How did you figure- uh oh.
+      endOfDialogue: 0
+      endOfPhase: 0
+      explodeQuestionMark: 1
+  - Evidence: Incorrect
+    evidenceLines:
+    - name: Ice Man
+      sentences: What? I don't even know what you're talking about.
+      endOfDialogue: 1
+      endOfPhase: 0
+      explodeQuestionMark: 0
+  currentDialogueFormat: 
+  currentPhaseCounter: 0
+  checkCurrentPhase: 

@@ -37,7 +37,7 @@ public class PresentZone : MonoBehaviour, IPointerEnterHandler
     private void Present()
     {
         Debug.Log("Presenting Evidence: " + presentedEvidence.name);
-        gm.SubmitDocument(presentedEvidence.transform);
+        gm.SubmitDocument(presentedEvidence);
     }
 
     public void Eject()

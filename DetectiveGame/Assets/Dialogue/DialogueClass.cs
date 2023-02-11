@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueClass
 {
     //this will later become a variable that gets the object of the evidence
-    //public string evidence;
+    public GameObject evidence;
     
     public string name;
 
