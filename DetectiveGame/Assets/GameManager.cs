@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         score = this.GetComponent<ScoreManager>();
-        presentZone = GameObject.FindGameObjectWithTag("PresentZone").GetComponent<PresentZone>();
+        //presentZone = GameObject.FindGameObjectWithTag("PresentZone").GetComponent<PresentZone>();
 
         RequestRandomDocument();
     }

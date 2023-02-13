@@ -7,13 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject magGlass;
     [SerializeField] private GameObject magCam;
-
+    [SerializeField] private GameObject dialogue;
     [SerializeField] private GameObject table;
     [SerializeField] Transform tPosTable;
     [SerializeField] Transform tPosFull;
     [SerializeField] Transform tPosInterview;
 
     [SerializeField] private GameObject heldEvidence;
+    private GameManager gm;
 
     public enum State
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         magGlass.SetActive(false);
     }
 
@@ -41,7 +43,21 @@ public class PlayerController : MonoBehaviour
             magGlass.SetActive(false);
         }
 
+        // Move camera
         SwitchPerspective();
+
+        // Submit evidence
+        if (heldEvidence != null)
+        {
+            //Debug.Log(heldEvidence.transform.localPosition.y);
+            if (heldEvidence.transform.localPosition.y > 400f)
+            {
+                Debug.Log("EVIDENCE SUBMITED");
+                gm.SubmitDocument(heldEvidence);
+                heldEvidence.transform.localPosition = new Vector3(0, 0, 0);
+                DropEvidence();
+            }
+        }
     }
 
     private void SwitchPerspective()
@@ -74,18 +90,21 @@ public class PlayerController : MonoBehaviour
             Camera.main.transform.position = tPosInterview.position;
             Camera.main.transform.rotation = tPosInterview.rotation;
             Camera.main.orthographic = false;
+            HideDialogue(true);
         }
         else if (state == State.full)
         {
             Camera.main.transform.position = tPosFull.position;
             Camera.main.transform.rotation = tPosFull.rotation;
             Camera.main.orthographic = false;
+            HideDialogue(true);
         }
         else if (state == State.table)
         {
             Camera.main.transform.position = tPosTable.position;
             Camera.main.transform.rotation = tPosTable.rotation;
             Camera.main.orthographic = true;
+            HideDialogue(false);
         }
     }
 
@@ -108,5 +127,10 @@ public class PlayerController : MonoBehaviour
     public GameObject GetEvidence()
     {
         return heldEvidence;
+    }
+
+    public void HideDialogue(bool doHide)
+    {
+        dialogue.SetActive(doHide);
     }
 }

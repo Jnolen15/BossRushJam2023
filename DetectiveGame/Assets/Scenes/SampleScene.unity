@@ -202,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22889432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3187,7 +3187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.25339842, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3757,6 +3757,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4170089611747942, guid: 821f5247fa32c24478c03345dbddf003, type: 3}
   m_PrefabInstance: {fileID: 1104724016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105420061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3611960746993712417, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+  m_PrefabInstance: {fileID: 1384518567}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120295248 stripped
 GameObject:
@@ -4727,6 +4732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3611960746993712417, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611960746993712421, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4811,29 +4820,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3611960746993712423, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3611960747519146666, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 590.1946
+      value: 356.2385
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747519146666, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 178.0272
+      value: 122.01
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747519146666, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -664.9027
+      value: -221.878
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747519146666, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 278.242
+      value: 61.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747519146667, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_fontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747519146667, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747519146667, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747601583646, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 122.783
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747601583646, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24.6452
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747601583646, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -846
+      value: -338.61
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747601583646, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 412
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747601583647, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_fontSize
+      value: 22.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611960747601583647, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3611960747781129717, guid: 19a2e43e422a02846baafc95c272591f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5161,7 +5202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5236,7 +5277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.15776972, g: 1, b: 0.02352941, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5550,7 +5591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1593263049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5829,7 +5870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1636117704
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5946,6 +5987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magGlass: {fileID: 222308736}
   magCam: {fileID: 1711695339}
+  dialogue: {fileID: 1105420061}
   table: {fileID: 1420290362}
   tPosTable: {fileID: 1545358273}
   tPosFull: {fileID: 1447456363}
@@ -6554,7 +6596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1804545197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6812,7 +6854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.023584902, b: 0.023584902, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

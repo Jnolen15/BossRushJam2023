@@ -44,7 +44,9 @@ public class Interactable : MonoBehaviour,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //Debug.Log("Pointer Exit");
+        Debug.Log("Pointer Exit, Let go");
+        isDragging = false;
+        pc.DropEvidence();
     }
 
     // ========== DRAG DROP ==========
@@ -65,7 +67,7 @@ public class Interactable : MonoBehaviour,
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //Debug.Log("Let go");
+        Debug.Log("Let go");
         isDragging = false;
         pc.DropEvidence();
     }
