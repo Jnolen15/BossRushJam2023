@@ -34,6 +34,12 @@ public class Interactable : MonoBehaviour,
                 transform.Rotate(new Vector3(0, 0, -1) * 10f, Space.Self);
             }
         }
+
+        if (transform.localPosition.x > 650 || transform.localPosition.x < -650)
+        {
+            Debug.Log("Reset cuz out of bounds");
+            transform.localPosition = new Vector3(0, 0, 0);
+        }
     }
 
     // ========== MOUSE CONTROLS ==========
