@@ -93,6 +93,9 @@ public class DialogueCode : MonoBehaviour
     private string questionString;
     public int currentPhaseCounter = 0;
     public string checkCurrentPhase;
+
+    public PlayerController pc;
+
     
 
     void Start()
@@ -136,11 +139,10 @@ public class DialogueCode : MonoBehaviour
     void Update()
     {
         
-        
         switch (currentDialogueFormat){
 
             case "Normal":
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
                 {
                     
                     //forNormalLines++;
@@ -150,14 +152,14 @@ public class DialogueCode : MonoBehaviour
                 break;
             case "Questioning":
                 //DisplayNextQuestioningSentence(characterDialogue[forNormalLines].sentences, forQuestioningLines);
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
                 {
                     DisplayNextQuestioningSentence(questionString, forQuestioningLines);
                 }
                 break;
             case "Evidence":
                 //DisplayNextEvidenceSentence(characterDialogue[forNormalLines].evidence, forNormalLines, forQuestioningLines);
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
                 {
                     DisplayNextEvidenceSentence(holdEvidence);
                 }
@@ -176,7 +178,7 @@ public class DialogueCode : MonoBehaviour
             //DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
         }
         */
-        Debug.Log(holdEvidence);
+        Debug.Log(forNormalLines);
 
     }
     public void OnMouseDown(GameObject question)
@@ -203,8 +205,10 @@ public class DialogueCode : MonoBehaviour
             {
                 
                 GameObject theQuestion = daQuestions.transform.GetChild(questionActivater).gameObject;
-                theQuestion.GetComponent<TextMeshProUGUI>().text = numQuestion;
                 theQuestion.SetActive(true);
+                theQuestion.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = numQuestion;
+                //theQuestion.GetComponent<TextMeshProUGUI>().text = numQuestion;
+                //theQuestion.SetActive(true);
                 questionActivater++;
             }
         }
