@@ -40,6 +40,9 @@ public class Interactable : MonoBehaviour,
             Debug.Log("Reset cuz out of bounds");
             transform.localPosition = new Vector3(0, 0, 0);
         }
+
+        // Fix for it randomly going to origin point of the world
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0f);
     }
 
     // ========== MOUSE CONTROLS ==========

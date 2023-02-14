@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public Transform[] Documents;
     private Transform correctDoc;
 
+    private bool gameEnded = false;
+
     void Start()
     {
         score = this.GetComponent<ScoreManager>();
@@ -93,14 +95,22 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        //Debug.Log("LOST");
+        if (gameEnded)
+            return;
+
+        gameEnded = true;
+
         lostScreen.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void Win()
     {
-        //Debug.Log("Won!");
+        if (gameEnded)
+            return;
+
+        gameEnded = true;
+
         winScreen.SetActive(true);
         Time.timeScale = 0;
     }
