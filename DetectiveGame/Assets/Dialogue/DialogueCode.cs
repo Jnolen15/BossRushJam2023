@@ -139,54 +139,45 @@ public class DialogueCode : MonoBehaviour
     void Update()
     {
         
-        switch (currentDialogueFormat){
+
+    }
+    public void OnMouseDownQuestion(GameObject question)
+    {
+        currentDialogueFormat = "Questioning";
+        questionString = question.GetComponent<TextMeshProUGUI>().text;
+        Debug.Log(questionString);
+        DisplayNextQuestioningSentence(questionString, forQuestioningLines);
+    }
+
+    public void OnMouseDownContinue()
+    {
+        switch (currentDialogueFormat)
+        {
 
             case "Normal":
-                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
+                if (pc.state != PlayerController.State.table)
                 {
-                    
+
                     //forNormalLines++;
                     DisplayNextSentence(currentPhaseCounter, forNormalLines);
-                    
+
                 }
                 break;
             case "Questioning":
                 //DisplayNextQuestioningSentence(characterDialogue[forNormalLines].sentences, forQuestioningLines);
-                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
+                if (pc.state != PlayerController.State.table)
                 {
                     DisplayNextQuestioningSentence(questionString, forQuestioningLines);
                 }
                 break;
             case "Evidence":
                 //DisplayNextEvidenceSentence(characterDialogue[forNormalLines].evidence, forNormalLines, forQuestioningLines);
-                if (Input.GetKeyDown(KeyCode.A) && (pc.state != PlayerController.State.table))
+                if (pc.state != PlayerController.State.table)
                 {
                     DisplayNextEvidenceSentence(holdEvidence);
                 }
-            break;
+                break;
         }
-        /*
-        if(Input.GetKeyDown(KeyCode.E) && holdEvidence == evidenceWeAreUsing)
-        {
-            currentDialogueFormat = "Evidence";
-            //DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
-        }
-        if (Input.GetKeyDown(KeyCode.E) && (holdEvidence != evidenceWeAreUsing || holdEvidence == null))
-        {
-            currentDialogueFormat = "Evidence";
-            //holdEvidence = "Incorrect";
-            //DisplayNextEvidenceSentence(holdEvidence, checkCurrentPhase, forEvidenceLines);
-        }
-        */
-        Debug.Log(forNormalLines);
-
-    }
-    public void OnMouseDown(GameObject question)
-    {
-        currentDialogueFormat = "Questioning";
-        questionString = question.GetComponent<TextMeshProUGUI>().text;
-        Debug.Log(questionString);
-        DisplayNextQuestioningSentence(questionString, forQuestioningLines);
     }
     public void DisplayNextSentence(int currentPhase,int nextLine)
     {
