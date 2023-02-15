@@ -326,6 +326,8 @@ public class DialogueCode : MonoBehaviour
     IEnumerator TypeLineCharacters(string line)
     {
         var dlogTextBox = daDialogue.GetComponent<TextMeshProUGUI>();
+        var criminalanimator = GameObject.FindGameObjectWithTag("Criminal").GetComponent<Animator>();
+        criminalanimator.SetBool("talking", true);
         isCurrentLineFinished = false;
 
         // empty the text box
@@ -363,6 +365,7 @@ public class DialogueCode : MonoBehaviour
             }
         }
 
+        criminalanimator.SetBool("talking", false);
         isCurrentLineFinished = true;
     }
 }

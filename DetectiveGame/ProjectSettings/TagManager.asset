@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameManager
   - PresentZone
+  - Criminal
   layers:
   - Default
   - TransparentFX
