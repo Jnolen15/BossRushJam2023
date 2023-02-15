@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -113,5 +114,15 @@ public class GameManager : MonoBehaviour
 
         winScreen.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void GoToScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

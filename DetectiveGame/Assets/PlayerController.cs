@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject heldEvidence;
     private GameManager gm;
+    [SerializeField] private float lookSpeed;
+    [SerializeField] private bool moving;
 
     public enum State
     {
-        interview,
         full,
         table
     } 
@@ -62,49 +63,35 @@ public class PlayerController : MonoBehaviour
 
     private void SwitchPerspective()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            if (state != State.interview)
-            {
-                state--;
-                Move();
-            }
+            state = State.table;
+            Move();
         }
                 
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.W))
         {
-            if (state != State.table)
-            {
-                state++;
-                Move();
-            }
+            state = State.full;
+            Move();
         }
     }
 
     private void Move()
     {
+        if (moving)
+            return;
+
         DropEvidence();
 
-        if (state == State.interview)
+        if (state == State.table)
         {
-            Camera.main.transform.position = tPosInterview.position;
-            Camera.main.transform.rotation = tPosInterview.rotation;
-            Camera.main.orthographic = false;
-            HideDialogue(true);
+            Debug.Log("Looking at Table");
+            StartCoroutine(TransitionLook(tPosTable, true));
         }
         else if (state == State.full)
         {
-            Camera.main.transform.position = tPosFull.position;
-            Camera.main.transform.rotation = tPosFull.rotation;
-            Camera.main.orthographic = false;
-            HideDialogue(true);
-        }
-        else if (state == State.table)
-        {
-            Camera.main.transform.position = tPosTable.position;
-            Camera.main.transform.rotation = tPosTable.rotation;
-            Camera.main.orthographic = true;
-            HideDialogue(false);
+            Debug.Log("Looking at Full");
+            StartCoroutine(TransitionLook(tPosFull, false));
         }
     }
 
@@ -132,5 +119,38 @@ public class PlayerController : MonoBehaviour
     public void HideDialogue(bool doHide)
     {
         dialogue.SetActive(doHide);
+    }
+
+    IEnumerator TransitionLook(Transform lookto, bool atTable)
+    {
+        if (!atTable)
+            Camera.main.orthographic = atTable;
+        else
+            HideDialogue(!atTable);
+
+        moving = true;
+        float time = 0;
+
+        Vector3 startPos = Camera.main.transform.position;
+        Quaternion startRot = Camera.main.transform.rotation;
+
+        while (time < lookSpeed)
+        {
+            float t = time / lookSpeed;
+            t = t * t * (3f - 2f * t);
+
+            Camera.main.transform.position = Vector3.Lerp(startPos, lookto.position, t);
+            Camera.main.transform.rotation = Quaternion.Lerp(startRot, lookto.rotation, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        moving = false;
+
+        if (atTable)
+            Camera.main.orthographic = atTable;
+        else
+            HideDialogue(!atTable);
     }
 }
