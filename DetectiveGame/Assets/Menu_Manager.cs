@@ -10,23 +10,27 @@ public class Menu_Manager : MonoBehaviour
     public GameObject MainMenu;
     public GameObject SettingsMenu;
     public GameObject CreditsMenu;
+    public bool moving = true;
+    public Transform CameraWide;
+    public Camera MainCam;
 
-    private GameObject CurrentMenu;
-    private GameObject NextMenu;
     // Start is called before the first frame update
     void Start()
     {
         MainMenu.SetActive(true);
         SettingsMenu.SetActive(true);
         CreditsMenu.SetActive(true);
-        CurrentMenu = MainMenu;
+
+        TransitionLook(CameraWide);
     }
 
     public void startGame()
     {
-        this.gameObject.SetActive(false);
-        // code here to animate looking up from desk
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Camera Transition");
+        // this.gameObject.SetActive(false);
+       
+        TransitionLook(CameraWide);
+
     }
 
     public void QuitGame()
@@ -34,5 +38,31 @@ public class Menu_Manager : MonoBehaviour
         // debug statement for in-editor functionality checking
         Debug.Log("Quitting Game");
         Application.Quit();
+    }
+
+
+    IEnumerator TransitionLook(Transform lookto)
+    {
+        moving = true;
+        float time = 0;
+        float lookSpeed = 0.75f;
+
+        Vector3 startPos = MainCam.transform.position;
+        Quaternion startRot = MainCam.transform.rotation;
+
+        while (time < lookSpeed)
+        {
+            float t = time / lookSpeed;
+            t = t * t * (3f - 2f * t);
+
+            MainCam.transform.position = Vector3.Lerp(startPos, lookto.position, t);
+            MainCam.transform.rotation = Quaternion.Lerp(startRot, lookto.rotation, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        moving = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
