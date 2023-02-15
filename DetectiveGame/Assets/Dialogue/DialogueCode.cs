@@ -96,7 +96,9 @@ public class DialogueCode : MonoBehaviour
 
     public PlayerController pc;
 
-    
+    private IEnumerator currDlogCoroutine;
+    private bool isCurrentLineFinished;
+
 
     void Start()
     {
@@ -186,7 +188,8 @@ public class DialogueCode : MonoBehaviour
         Debug.Log(forNormalLines);
         checkCurrentPhase = "Normal";
         daName.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhase].dialogueClasses[nextLine].name;
-        daDialogue.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences;
+        //daDialogue.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences;
+        SendToTextBox(allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences);
         //holdEvidence = null;
         int questionActivater = 0;
         if (allPhases[currentPhaseCounter].dialogueClasses[nextLine].questions.Length > 0)
@@ -239,7 +242,8 @@ public class DialogueCode : MonoBehaviour
 
         daName.GetComponent<TextMeshProUGUI>().text = theQuestioning[nextLine].name;
             //Debug.Log(theQuestioning[nextLine].name);
-        daDialogue.GetComponent<TextMeshProUGUI>().text = theQuestioning[nextLine].sentences;
+        //daDialogue.GetComponent<TextMeshProUGUI>().text = theQuestioning[nextLine].sentences;
+        SendToTextBox(theQuestioning[nextLine].sentences);
         holdEvidence = theQuestioning[nextLine].evidence;
         bool enders = theQuestioning[nextLine].endOfDialogue;
         bool endingThePhase = theQuestioning[nextLine].endOfPhase;
@@ -275,8 +279,8 @@ public class DialogueCode : MonoBehaviour
         EvidenceDialogueClass[] theEvidence = correctEvidence[evidence];
 
         daName.GetComponent<TextMeshProUGUI>().text = theEvidence[forEvidenceLines].name;
-        daDialogue.GetComponent<TextMeshProUGUI>().text = theEvidence[forEvidenceLines].sentences;
-        
+        //daDialogue.GetComponent<TextMeshProUGUI>().text = theEvidence[forEvidenceLines].sentences;
+        SendToTextBox(theEvidence[forEvidenceLines].sentences);
 
         bool enders = theEvidence[forEvidenceLines].endOfDialogue;
         bool endPhse = theEvidence[forEvidenceLines].endOfPhase;
@@ -306,4 +310,59 @@ public class DialogueCode : MonoBehaviour
     }
 
 
+    private void SendToTextBox(string text)
+    {
+        // stop any coroutines currently running so we can run this one
+        if (currDlogCoroutine != null)
+        {
+            StopCoroutine(currDlogCoroutine);
+        }
+
+        // run our coroutine
+        currDlogCoroutine = TypeLineCharacters(text);
+        StartCoroutine(currDlogCoroutine);
+    }
+
+    IEnumerator TypeLineCharacters(string line)
+    {
+        var dlogTextBox = daDialogue.GetComponent<TextMeshProUGUI>();
+        isCurrentLineFinished = false;
+
+        // empty the text box
+        dlogTextBox.text = "";
+        int charCount = 0;
+
+        // divide the line up into individual letters
+        char[] letterArray = line.ToCharArray();
+
+        // pause and then add in letters with pauses between each addition
+        for (int i = 0; i < line.Length; i++)
+        {
+            if (!isCurrentLineFinished)
+            {
+                // add to the textbox letter by letter
+                dlogTextBox.text += letterArray[i];
+
+                // play typing sfx
+                if (0 == charCount % 2 && letterArray[i] != ' ')
+                {
+                    // PLAY SOUND HERE
+                    //uiReferences.boop.Play();
+                }
+                charCount++;
+
+                // wait before typing next character
+                yield return new WaitForSecondsRealtime(0.01f);
+            }
+            else
+            {
+                // line is supposed to be finished, so completely type line and put loop at the end
+                dlogTextBox.text = line;
+                //uiReferences.boop.Play();
+                i = line.Length;
+            }
+        }
+
+        isCurrentLineFinished = true;
+    }
 }
