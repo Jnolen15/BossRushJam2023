@@ -62,7 +62,7 @@ RectTransform:
   m_GameObject: {fileID: 1649660567517305712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1649660568256672139}
   - {fileID: 1649660567075285078}
@@ -72,8 +72,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: -1920, y: -1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649660567517305678
 MonoBehaviour:
@@ -87,10 +87,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e1f14ab44909040a9eb2845641d09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllMenus: {fileID: 0}
   MainMenu: {fileID: 1649660567977790868}
   SettingsMenu: {fileID: 1649660567075285081}
   CreditsMenu: {fileID: 1649660568256672138}
+  moving: 1
+  CameraWide: {fileID: 0}
+  MainCam: {fileID: 0}
 --- !u!1 &1649660567977790868
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2173010789551356901, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_text
-      value: "Riley Dix - Production/Writing\nJared Nolan - Programming\nJuan Alvarado
+      value: "Riley Dix - Production/Writing\nJared Nolen - Programming\nJuan Alvarado
         - Programming\nKeenan Rea - Programming/UI\nJoan Wong - Art \nRyan Marcus
         - Writing/Art\nMax Monson - Music\n"
       objectReference: {fileID: 0}

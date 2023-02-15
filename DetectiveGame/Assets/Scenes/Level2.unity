@@ -3731,7 +3731,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a968841cfd728e74a92c630b8f6a371e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f92180bda5c37b44aea75b69a0dac6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3750,8 +3750,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307978231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.96, y: -0.68, z: 9.16}
-  m_LocalScale: {x: 3.6, y: 3.6, z: 1}
+  m_LocalPosition: {x: 9.25, y: -2.75, z: 10.94}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -4539,7 +4539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5864902821659147933, guid: ce6b4468e3204934684654bee491d503, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: Menu Testing Scene
       objectReference: {fileID: 0}
     - target: {fileID: 5864902821659147933, guid: ce6b4468e3204934684654bee491d503, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5255,7 +5255,7 @@ MonoBehaviour:
   Rounds: {fileID: 1593263050}
   winScreen: {fileID: 1984875937}
   lostScreen: {fileID: 1459386299}
-  roundTime: 100
+  roundTime: 60
   looseScore: 25
   winScore: 75
   numInteractions: 3
@@ -6412,6 +6412,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 930952869}
     m_Modifications:
+    - target: {fileID: 234830814923736293, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f92180bda5c37b44aea75b69a0dac6f, type: 3}
+    - target: {fileID: 280116424521460129, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
+      propertyPath: m_text
+      value: Cat Burglar
+      objectReference: {fileID: 0}
+    - target: {fileID: 280116424521460129, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
+      propertyPath: m_fontSize
+      value: 82.35
+      objectReference: {fileID: 0}
     - target: {fileID: 5864902821659147933, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6438,7 +6450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5864902821659147933, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: Menu Testing Scene
       objectReference: {fileID: 0}
     - target: {fileID: 5864902821659147933, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6562,7 +6574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8337341484963927013, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 8337341484963927013, guid: eb50a725f75493542897e6614ac83e6a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
