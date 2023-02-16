@@ -205,7 +205,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 8467104065351928687}
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
@@ -311,6 +323,18 @@ PrefabInstance:
     - target: {fileID: 6200601231304140590, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221700386989702594, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: _volumeParameter
+      value: MusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442447550352105310, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_Value
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442447550352105310, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 7742083964949063196, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Name
@@ -891,7 +915,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 8467104065351928687}
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
@@ -981,6 +1017,18 @@ PrefabInstance:
     - target: {fileID: 6200601231304140590, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221700386989702594, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: _volumeParameter
+      value: SfxVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442447550352105310, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_Value
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442447550352105310, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 7742083964949063196, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Name
