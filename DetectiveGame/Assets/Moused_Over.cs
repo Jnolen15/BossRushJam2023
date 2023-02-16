@@ -10,6 +10,8 @@ public class Moused_Over : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject FolderCover;
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
+        this.GetComponent<AudioSource>().Play();
+
         // Debug.Log("mousedOver");
         this.transform.parent.transform.parent.SetAsLastSibling();
         FolderCover.SetActive(false);

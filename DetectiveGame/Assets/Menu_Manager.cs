@@ -25,12 +25,7 @@ public class Menu_Manager : MonoBehaviour
     }
 
     public void StartGame()
-    {
-        for(int i = 0; i < 4; i++)
-        {
-            this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
-        }
-       
+    {       
         StartCoroutine(TransitionLook(CameraWide));
 
     }
@@ -45,6 +40,13 @@ public class Menu_Manager : MonoBehaviour
 
     IEnumerator TransitionLook(Transform lookto)
     {
+        yield return new WaitForSeconds(0.6f);
+
+        for (int i = 0; i < 4; i++)
+        {
+            this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
         moving = true;
         float time = 0;
         float lookSpeed = 0.75f;
