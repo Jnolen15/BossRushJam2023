@@ -190,7 +190,7 @@ public class DialogueCode : MonoBehaviour
         daName.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhase].dialogueClasses[nextLine].name;
         //daDialogue.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences;
         SendToTextBox(allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences);
-        //holdEvidence = null;
+        holdEvidence = allPhases[currentPhaseCounter].dialogueClasses[nextLine].evidence;
         int questionActivater = 0;
         if (allPhases[currentPhaseCounter].dialogueClasses[nextLine].questions.Length > 0)
         {
@@ -213,6 +213,7 @@ public class DialogueCode : MonoBehaviour
             daQuestions.transform.GetChild(2).gameObject.SetActive(false);
         }
         bool end = allPhases[currentPhaseCounter].dialogueClasses[nextLine].endOfDialogue;
+        bool endingThePhase = allPhases[currentPhase].dialogueClasses[nextLine].endOfPhase;
         if (end)
         {
             forNormalLines = 0;
@@ -220,6 +221,15 @@ public class DialogueCode : MonoBehaviour
         else
         {
             forNormalLines++;
+        }
+        if (endingThePhase)
+        {
+            currentDialogueFormat = "Normal";
+            currentPhaseCounter++;
+            forNormalLines = 0;
+            forQuestioningLines = 0;
+            forEvidenceLines = 0;
+
         }
 
         //Deals with the images of the dialogue
