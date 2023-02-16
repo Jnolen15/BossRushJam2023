@@ -273,6 +273,10 @@ public class DialogueCode : MonoBehaviour
             currentPhaseCounter++;
             forNormalLines = 0;
             forQuestioningLines = 0;
+            if(theQuestioning[nextLine].sentences == "")
+            {
+                DisplayNextSentence(currentPhaseCounter, forNormalLines);
+            }
             
         }
         

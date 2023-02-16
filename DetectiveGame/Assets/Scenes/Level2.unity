@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidence.Array.data[0]
@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.size
@@ -338,6 +338,14 @@ PrefabInstance:
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[2].currentPhase
       value: Phase 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].currentPhase
+      value: Phase 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].currentPhase
+      value: Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[0].Question
@@ -358,6 +366,30 @@ PrefabInstance:
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[4].Question
       value: Is that a Garfield reference?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[5].Question
+      value: What else did you do yesterday?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[6].Question
+      value: Why did you go outside?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].Question
+      value: Why are you covered in soot?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].Question
+      value: "What\u2019s your opinion on dogs?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[9].Question
+      value: Why were you in those houses?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[10].Question
+      value: "You sure that hating Monday\u2019s wasn\u2019t a Garfield reference?"
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[0].Evidence
@@ -388,6 +420,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[0].dialogueClasses.Array.data[0].name
       value: Cat-Burglar?
       objectReference: {fileID: 0}
@@ -401,6 +437,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[2].dialogueClasses.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].name
       value: Cat-Burglar?
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
@@ -424,8 +468,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
-      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.size
+      propertyPath: questioningLines.Array.data[5].questioningLines.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[6].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[9].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[10].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.size
@@ -454,6 +522,15 @@ PrefabInstance:
         I hate Mondays.
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].sentences
+      value: Sow maybe i went owtside fow a widdwe bit, but i went stwaight bawck
+        home aftew thawt!
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].sentences
+      value: Buwt I hawve no mowtive! Why wouwd I steaw aww da cats?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[0].questioningLines.Array.data[0].name
       value: Cat-Burglar?
       objectReference: {fileID: 0}
@@ -474,12 +551,68 @@ PrefabInstance:
       value: Cat-Burglar?
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[5].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[6].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[9].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[0].dialogueClasses.Array.data[1].endOfDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[1].dialogueClasses.Array.data[0].endOfDialogue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[10].questioningLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[0].evidenceLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[1].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[2].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[3].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.data[0].name
+      value: Cat-Burglar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[3].evidenceLines.Array.data[0].name
+      value: Cat-Burglar?
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[1].evidence
@@ -494,8 +627,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].questioningLines.Array.data[0].evidence
+      value: 
+      objectReference: {fileID: 1788949321}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].questioningLines.Array.data[0].evidence
+      value: 
+      objectReference: {fileID: 1660303176}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[0].questioningLines.Array.data[0].sentences
-      value: Nowo.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[0].sentences
@@ -515,8 +656,33 @@ PrefabInstance:
       value: .............No.
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[5].questioningLines.Array.data[0].sentences
+      value: Nufing, i sweaw! i went stwaight home aftew, so i had no time tuwu steaw
+        any cats!
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[6].questioningLines.Array.data[0].sentences
+      value: Tuwu puwnch the dawg mahscot.
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].questioningLines.Array.data[0].sentences
+      value: '......... I... down''t showewr? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].questioningLines.Array.data[0].sentences
+      value: ...You looking for a fight, officer?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[9].questioningLines.Array.data[0].sentences
+      value: Thawt's my jawb! I'm a chimney sweepew.
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[0].questioningLines.Array.data[0].endOfPhase
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[10].questioningLines.Array.data[0].sentences
+      value: ......No.
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[0].endOfPhase
@@ -531,12 +697,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[0].evidenceLines.Array.data[0].sentences
+      value: "Okay... weww i might wike chimneys a widdwe bit\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[0].sentences
-      value: What? I don't even know what you're talking about.
+      value: Ok fine I awdmit iwt, I stowe thewm, I stowe thewm AWW!
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[1].sentences
+      value: Mummy awnd daddy nevew gave me any kitty's. They onwy wanted icky dogs.
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[2].sentences
+      value: "Weww if I cawn't have thewm\u2026 then NO-ONE EWSE CAN! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[3].sentences
+      value: "Weww if I cawn't have thewm\u2026 then NO-ONE EWSE CAN! "
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.data[0].sentences
-      value: What? I don't even know what you're talking about.
+      value: "Oh, uhh... Thawt? Ok\u2026 weww, maybe i went outside fow a widdwe
+        bit. Wowth iwt though."
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[3].evidenceLines.Array.data[0].sentences
+      value: I don't knyow what you'we tawking about.
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[0].dialogueClasses.Array.data[1].questions.Array.size
@@ -549,6 +736,26 @@ PrefabInstance:
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[2].dialogueClasses.Array.data[0].questions.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].questions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].questions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[0].endOfPhase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[2].endOfPhase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.data[0].endOfPhase
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[0].endOfDialogue
@@ -564,6 +771,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[5].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[6].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[7].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[8].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[9].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[10].questioningLines.Array.data[0].endOfDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
@@ -587,15 +818,55 @@ PrefabInstance:
       value: Is that a Garfield reference?
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].questions.Array.data[0]
+      value: What else did you do yesterday?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].questions.Array.data[1]
+      value: Why did you go outside?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].questions.Array.data[2]
+      value: Why are you covered in soot?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].questions.Array.data[0]
+      value: "What\u2019s your opinion on dogs?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].questions.Array.data[1]
+      value: Why were you in those houses?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].questions.Array.data[2]
+      value: "You sure that hating Monday\u2019s wasn\u2019t a Garfield reference?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: allPhases.Array.data[4].dialogueClasses.Array.data[0].questions.Array.data[3]
+      value: Why are you covered in soot?
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[0].endOfDialogue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.data[0].endOfDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[2].explodeQuestionMark
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[1].evidenceLines.Array.data[3].explodeQuestionMark
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[2].evidenceLines.Array.data[0].explodeQuestionMark
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: evidenceDialogueLines.Array.data[3].evidenceLines.Array.data[0].explodeQuestionMark
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316419, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
@@ -5774,12 +6045,12 @@ MonoBehaviour:
   suspectsDialogue: {fileID: 151401645}
   wrong: {fileID: 1454929482}
   Documents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 322519861}
+  - {fileID: 1788949322}
+  - {fileID: 1660303177}
+  - {fileID: 2025947100}
+  - {fileID: 526877405}
+  - {fileID: 277984862}
 --- !u!4 &1619495024
 Transform:
   m_ObjectHideFlags: 0
@@ -7536,10 +7807,34 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 151401645}
+    - target: {fileID: 5232868560257874275, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232868560257874275, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5232868560338709020, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 151401645}
+    - target: {fileID: 5232868560338709022, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232868560338709022, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232868560844627289, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232868560844627289, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5232868560844627295, guid: 1c39f60bb41dbcd409779483d5289c9a, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
