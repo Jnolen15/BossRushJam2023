@@ -310,7 +310,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.8
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -330,7 +330,7 @@ MonoBehaviour:
   _mixer: {fileID: 24100000, guid: b08616bb42cc69e48b3e319f11be1568, type: 2}
   _slider: {fileID: 6442447550352105310}
   _multiplier: 30
-  sliderValue: 0.8
+  sliderValue: 1
 --- !u!1 &7764323122117227071
 GameObject:
   m_ObjectHideFlags: 0

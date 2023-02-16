@@ -11,7 +11,7 @@ public class Volume_Slider : MonoBehaviour
     [SerializeField] AudioMixer _mixer;
     [SerializeField] Slider _slider;
     [SerializeField] float _multiplier = 30f;
-    [SerializeField] float sliderValue = 0.8f;
+    [SerializeField] float sliderValue = 1;
 
     private void Awake()
     {
