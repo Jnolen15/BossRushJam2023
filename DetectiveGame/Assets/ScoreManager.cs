@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Image winbar;
     [SerializeField] private int maxScore;
     [SerializeField] private int startScore;
+    [SerializeField] private int scoreAmmount;
     [SerializeField] private float curScore;
     [SerializeField] private bool hasLost;
     [SerializeField] private bool hasWon;
@@ -34,28 +35,9 @@ public class ScoreManager : MonoBehaviour
         winbar.fillAmount = gm.winScore / maxScore;
     }
 
-    void Update()
-    {
-        if(!hasLost || !hasWon)
-        {
-            // For testing
-            if (Input.GetKeyDown(KeyCode.J))
-                Succeeded();
-
-            if (Input.GetKeyDown(KeyCode.K))
-                Failed();
-
-            // Losing
-            if (curScore < gm.looseScore)
-            {
-                gm.Lose();
-            }
-        }
-    }
-
     public void Succeeded()
     {
-        CurScore += 25;
+        CurScore += scoreAmmount;
 
         if (CurScore > maxScore)
             CurScore = maxScore;
@@ -63,7 +45,7 @@ public class ScoreManager : MonoBehaviour
 
     public void Failed()
     {
-        CurScore -= 25;
+        CurScore -= scoreAmmount;
 
         if (CurScore < 0)
             CurScore = 0;

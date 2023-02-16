@@ -7,7 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI DocName; // This is just for testing
-    [SerializeField] private TextMeshProUGUI Rounds; // This is just for testing
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject lostScreen;
     [SerializeField] private GameObject dialogueManager;
@@ -16,8 +15,6 @@ public class GameManager : MonoBehaviour
     public float roundTime;
     public float looseScore;
     public float winScore;
-    public int numInteractions;
-    public int curInteraction;
     public DialogueCode suspectsDialogue;
     public GameObject wrong;
     private ScoreManager score;
@@ -40,19 +37,19 @@ public class GameManager : MonoBehaviour
             roundTime -= Time.deltaTime;
             //CurScore -= Time.deltaTime;
         }
-        else if (score.CurScore >= winScore)
-            Win();
+        // If time runs out, Lose
         else
             Lose();
 
-        // Interactions
-        if (curInteraction > numInteractions)
+        // Lose if player score falls below loose threshold
+        if (score.CurScore <= looseScore)
         {
-            if (score.CurScore >= winScore)
-                Win();
-            else
-                Lose();
+            Lose();
         }
+
+        // Win If player score passes the win threshold
+        if (score.CurScore >= winScore)
+            Win();
     }
 
     public void RequestDocument(Transform doc)
@@ -77,11 +74,6 @@ public class GameManager : MonoBehaviour
             
             score.Failed();
         }
-
-        /*curInteraction++;
-        Rounds.text = (curInteraction.ToString() + '/' + numInteractions.ToString());
-        presentZone.Eject();
-        RequestRandomDocument();*/
     }
 
     public void Lose()
@@ -89,10 +81,7 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
-        gameEnded = true;
-
-        lostScreen.SetActive(true);
-        Time.timeScale = 0;
+        StartCoroutine(EndGame(lostScreen));
     }
 
     public void Win()
@@ -100,9 +89,18 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
+        StartCoroutine(EndGame(winScreen));
+    }
+
+    IEnumerator EndGame(GameObject screen)
+    {
         gameEnded = true;
 
-        winScreen.SetActive(true);
+        yield return new WaitForSecondsRealtime(2f);
+
+        dialogue.SetActive(false);
+        dialogueManager.SetActive(false);
+        screen.SetActive(true);
         Time.timeScale = 0;
     }
 
