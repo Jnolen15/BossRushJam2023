@@ -21,17 +21,15 @@ public class Menu_Manager : MonoBehaviour
         SettingsMenu.SetActive(true);
         CreditsMenu.SetActive(true);
 
-        // TransitionLook(CameraWide);
+        TransitionLook(CameraWide);
     }
 
-    public void StartGame()
+    public void startGame()
     {
-        for(int i = 0; i < 4; i++)
-        {
-            this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
-        }
+        Debug.Log("Camera Transition");
+        // this.gameObject.SetActive(false);
        
-        StartCoroutine(TransitionLook(CameraWide));
+        TransitionLook(CameraWide);
 
     }
 
@@ -52,8 +50,6 @@ public class Menu_Manager : MonoBehaviour
         Vector3 startPos = MainCam.transform.position;
         Quaternion startRot = MainCam.transform.rotation;
 
-
-        yield return new WaitForSeconds(0.2f);
         while (time < lookSpeed)
         {
             float t = time / lookSpeed;
@@ -65,8 +61,8 @@ public class Menu_Manager : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        moving = false;
 
+        moving = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
