@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150210789985316419}
   - component: {fileID: 150210789985316418}
+  - component: {fileID: 3651365286113466728}
   m_Layer: 0
   m_Name: Case 3 Dialogue
   m_TagString: Untagged
@@ -43,33 +44,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa02308f16b7af4a993f572e2809def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeSounds:
+  - {fileID: 8300000, guid: ab315d79cf188bd48bb9f0e832dac211, type: 3}
+  - {fileID: 8300000, guid: 8c1162a229a08ad4ca145e02236afdf9, type: 3}
+  - {fileID: 8300000, guid: 5750376fe797b434bb8beb618abc2777, type: 3}
+  - {fileID: 8300000, guid: e21d2a752424ed54daf57002d6933c11, type: 3}
+  gm: {fileID: 0}
   daName: {fileID: 0}
   daDialogue: {fileID: 0}
   daQuestions: {fileID: 0}
   DaEvidence: 
-  evidenceWeAreUsing: Pizza
+  evidenceWeAreUsing: {fileID: 0}
   evidence:
-  - Goon Testimony
-  - Crime Scene Note
-  - Pet Bunny
-  - Incorrect
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   allPhases:
   - currentPhase: Setup
     dialogueClasses:
-    - evidence: 
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: "Youse got nothin on me\r"
       questions: []
       endOfDialogue: 0
       endOfPhase: 0
-    - evidence: 
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: Youse can't prove I was there, and youse definitely can't prove
         I killed him. Youse don't even have a motive.
       questions: []
       endOfDialogue: 0
       endOfPhase: 0
-    - evidence: 
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: Well officer? Why don'ts we get started.
       questions:
@@ -78,7 +85,7 @@ MonoBehaviour:
       endOfPhase: 0
   - currentPhase: Phase 1
     dialogueClasses:
-    - evidence: 
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: That night I was with my gang. I was meeting with the big boss,
         and my underlings.
@@ -89,7 +96,7 @@ MonoBehaviour:
       endOfPhase: 0
   - currentPhase: Phase 2
     dialogueClasses:
-    - evidence: 
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: "Look, I liked the guy. I don\u2019t even have a reason to kill
         him!"
@@ -100,7 +107,7 @@ MonoBehaviour:
       endOfPhase: 0
   - currentPhase: Phase 3
     dialogueClasses:
-    - evidence: Pet Bunny
+    - evidence: {fileID: 0}
       name: Ice Man
       sentences: I was back at the meeting in less than 20 minutes. Where could I
         have hidden a big ol sharpened murder weapon in that time?
@@ -111,19 +118,19 @@ MonoBehaviour:
   - Question: Where were you that night?
     questioningLines:
     - name: Prota
-      evidence: 
+      evidence: {fileID: 0}
       sentences: Where were you that night?
       endOfDialogue: 0
       endOfPhase: 1
   - Question: Were you with them the whole time?
     questioningLines:
     - name: Protag
-      evidence: 
+      evidence: {fileID: 0}
       sentences: Were you with them the whole time?
       endOfDialogue: 0
       endOfPhase: 0
     - name: Ice Man
-      evidence: Goon Testimony
+      evidence: {fileID: 0}
       sentences: "Of course! The boss was talking my ear off the whole meeting, I
         wouldn\u2019t have even had time to kill the guy."
       endOfDialogue: 1
@@ -131,12 +138,12 @@ MonoBehaviour:
   - Question: Did the boss tell you to kill him?
     questioningLines:
     - name: Protag
-      evidence: 
+      evidence: {fileID: 0}
       sentences: Did the boss tell you to kill him?
       endOfDialogue: 0
       endOfPhase: 0
     - name: Ice Man
-      evidence: 
+      evidence: {fileID: 0}
       sentences: "Nope. We weren\u2019t even talking about him at that meeting. We
         were talking about other crime stuff."
       endOfDialogue: 1
@@ -144,12 +151,12 @@ MonoBehaviour:
   - Question: Did you phone the police?
     questioningLines:
     - name: Protag
-      evidence: 
+      evidence: {fileID: 0}
       sentences: Did you phone the police?
       endOfDialogue: 0
       endOfPhase: 0
     - name: Ice Man
-      evidence: 
+      evidence: {fileID: 0}
       sentences: You uh, you saw the gang photo right? Like a crime family? No. I
         did not phone the police. Left that work to a more law abiding citizen.
       endOfDialogue: 1
@@ -157,18 +164,18 @@ MonoBehaviour:
   - Question: Have there been any recent arguments between you two?
     questioningLines:
     - name: Protag
-      evidence: 
+      evidence: {fileID: 0}
       sentences: Have there been any recent arguments between you two?
       endOfDialogue: 0
       endOfPhase: 0
     - name: Ice Man
-      evidence: Crime Scene Note
+      evidence: {fileID: 0}
       sentences: "Look, I get what youse getting at. But no, we\u2019ve been good
         buddies lately. We haven\u2019t had so much as a disagreement recently."
       endOfDialogue: 1
       endOfPhase: 0
   evidenceDialogueLines:
-  - Evidence: Goon Testimony
+  - Evidence: {fileID: 0}
     evidenceLines:
     - name: Ice Man
       sentences: Okay okay, yeah I did have to step out of the meeting. The boss
@@ -177,7 +184,7 @@ MonoBehaviour:
       endOfDialogue: 0
       endOfPhase: 1
       explodeQuestionMark: 0
-  - Evidence: Crime Scene Note
+  - Evidence: {fileID: 0}
     evidenceLines:
     - name: Ice Man
       sentences: "Okay pig, let\u2019s get this straight. Yeah. I was there before
@@ -196,20 +203,118 @@ MonoBehaviour:
       endOfDialogue: 0
       endOfPhase: 1
       explodeQuestionMark: 0
-  - Evidence: Pet Bunny
+  - Evidence: {fileID: 0}
     evidenceLines:
     - name: Ice Man
       sentences: How did you figure- uh oh.
       endOfDialogue: 0
       endOfPhase: 0
       explodeQuestionMark: 1
-  - Evidence: Incorrect
+  - Evidence: {fileID: 0}
     evidenceLines:
     - name: Ice Man
       sentences: What? I don't even know what you're talking about.
       endOfDialogue: 1
       endOfPhase: 0
       explodeQuestionMark: 0
+  holdEvidence: {fileID: 0}
   currentDialogueFormat: 
   currentPhaseCounter: 0
   checkCurrentPhase: 
+  pc: {fileID: 0}
+--- !u!82 &3651365286113466728
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150210789985316417}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4558998591783340861, guid: b08616bb42cc69e48b3e319f11be1568, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e21d2a752424ed54daf57002d6933c11, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

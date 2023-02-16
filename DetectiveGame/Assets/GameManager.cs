@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     private bool gameEnded = false;
     private Transform correctDoc;
     private PlayerController pc;
+    private bool interviewStarted;
+    [SerializeField] private AudioSource winSound;
+    [SerializeField] private AudioSource loseSound;
 
 
     void Start()
@@ -31,6 +34,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        // Wait until prep stage is over
+        if (!interviewStarted)
+            return;
+
         // Timer
         if (roundTime > 0)
         {
@@ -50,6 +57,16 @@ public class GameManager : MonoBehaviour
         // Win If player score passes the win threshold
         if (score.CurScore >= winScore)
             Win();
+    }
+
+    public void BringinSuspect()
+    {
+        interviewStarted = true;
+        pc.dialogueStarted = true;
+        startButton.SetActive(false);
+        dialogue.SetActive(true);
+        dialogueManager.SetActive(true);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().StartTimed();
     }
 
     public void RequestDocument(Transform doc)
@@ -81,6 +98,9 @@ public class GameManager : MonoBehaviour
         if (gameEnded)
             return;
 
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().StopMusic();
+        loseSound.Play();
+
         StartCoroutine(EndGame(lostScreen));
     }
 
@@ -88,6 +108,9 @@ public class GameManager : MonoBehaviour
     {
         if (gameEnded)
             return;
+
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().StopMusic();
+        winSound.Play();
 
         StartCoroutine(EndGame(winScreen));
     }
@@ -112,13 +135,5 @@ public class GameManager : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void BringinSuspect()
-    {
-        pc.dialogueStarted = true;
-        startButton.SetActive(false);
-        dialogue.SetActive(true);
-        dialogueManager.SetActive(true);
     }
 }

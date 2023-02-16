@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DialogueCode : MonoBehaviour
 {
+    public AudioClip[] typeSounds;
     // Class that lets writers do questioning dialogue base on which line the suspect is on
     // Example: Character Dialogue [0] is Questioning Dialogue [0]
     public GameManager gm;
@@ -359,10 +360,10 @@ public class DialogueCode : MonoBehaviour
                 dlogTextBox.text += letterArray[i];
 
                 // play typing sfx
-                if (0 == charCount % 2 && letterArray[i] != ' ')
+                if (0 == charCount % 4 && letterArray[i] != ' ')
                 {
                     // PLAY SOUND HERE
-                    //uiReferences.boop.Play();
+                    PlayRandomSound();
                 }
                 charCount++;
 
@@ -380,5 +381,12 @@ public class DialogueCode : MonoBehaviour
 
         criminalanimator.SetBool("talking", false);
         isCurrentLineFinished = true;
+    }
+
+    private void PlayRandomSound()
+    {
+        int rand = Random.Range(0, typeSounds.Length);
+
+        this.GetComponent<AudioSource>().PlayOneShot(typeSounds[rand]);
     }
 }
