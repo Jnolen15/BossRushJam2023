@@ -67,7 +67,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: c0771ea212972134db3c64425a82c03a
+    name: MusicVolume
+  - guid: f63b2800860ce054f819a4f24b6e8b58
+    name: SFXVolume
   m_AudioMixerGroupViews:
   - guids:
     - d7afb36bc8f5b424e811da3fc99093e6
@@ -132,6 +136,20 @@ AudioMixerEffectController:
   m_EffectID: 542359396fc242a4b8d2a6b3e81f31de
   m_EffectName: Attenuation
   m_MixLevel: abe6e0de4aeb4b344995705586ba5232
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &7131757001485749234
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: e1a73c4e72ce4a845bd04b224a185bbe
+  m_EffectName: Send
+  m_MixLevel: 99d3a70e5d9ced94ab67ef6fb4ccc854
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
