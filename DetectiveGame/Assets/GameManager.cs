@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = true;
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(4f);
 
         dialogue.SetActive(false);
         dialogueManager.SetActive(false);
