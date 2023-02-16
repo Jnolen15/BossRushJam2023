@@ -66,6 +66,11 @@ public class Interactable : MonoBehaviour,
         isDragging = true;
 
         pc.PickupEvidence(this.gameObject);
+
+        if (this.GetComponent<AudioSource>() != null)
+            this.GetComponent<AudioSource>().Play();
+        else
+            Debug.LogError(name + " Does not have Audio Source!");
     }
 
     public void OnDrag(PointerEventData eventData)
