@@ -325,7 +325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.size
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].Question
+      value: Have there been any recent arguments between you two?
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: evidenceDialogueLines.Array.data[0].Evidence
@@ -356,6 +360,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].questioningLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: allPhases.Array.data[3].dialogueClasses.Array.data[0].evidence
       value: 
       objectReference: {fileID: 286623646}
@@ -372,6 +380,10 @@ PrefabInstance:
       value: Ice Man
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[0].name
+      value: Ice Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[0].evidence
       value: 
       objectReference: {fileID: 1508162679}
@@ -379,6 +391,10 @@ PrefabInstance:
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[1].evidence
       value: 
       objectReference: {fileID: 1508162679}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[0].evidence
+      value: 
+      objectReference: {fileID: 1107590449}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[1].evidence
       value: 
@@ -403,6 +419,11 @@ PrefabInstance:
         not phone the police. Left that work to a more law abiding citizen.
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[0].sentences
+      value: "Look, I get what youse getting at. But no, we\u2019ve been good buddies
+        lately. We haven\u2019t had so much as a disagreement recently."
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[1].questioningLines.Array.data[0].endOfDialogue
       value: 1
       objectReference: {fileID: 0}
@@ -412,6 +433,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
       propertyPath: questioningLines.Array.data[3].questioningLines.Array.data[0].endOfDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 150210789985316418, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}
+      propertyPath: questioningLines.Array.data[4].questioningLines.Array.data[0].endOfDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150210789985316419, guid: 8a24a68258101654eb8092bb7ef58fa5, type: 3}

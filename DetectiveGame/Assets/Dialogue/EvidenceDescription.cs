@@ -9,6 +9,9 @@ public class EvidenceDescription : MonoBehaviour
     public string evidence;
     public string description;
     public GameObject evidenceWindow;
+    public GameObject evidenceName;
+    public GameObject evidenceDescription;
+    public PlayerController pc;
     void Start()
     {
         
@@ -22,6 +25,16 @@ public class EvidenceDescription : MonoBehaviour
 
     public void OnMouseOver()
     {
-        
+        if (pc.state == PlayerController.State.table)
+        {
+            evidenceName.GetComponent<TextMeshProUGUI>().text = evidence;
+            evidenceDescription.GetComponent<TextMeshProUGUI>().text = description;
+            evidenceWindow.SetActive(true);
+        }
+    }
+
+    public void OnMouseOff()
+    {
+        evidenceWindow.SetActive(false);
     }
 }
