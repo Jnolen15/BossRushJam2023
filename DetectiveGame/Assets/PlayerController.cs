@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject magGlass;
     [SerializeField] private GameObject magCam;
     [SerializeField] private GameObject dialogue;
+    [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject table;
     [SerializeField] Transform tPosTable;
     [SerializeField] Transform tPosFull;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private GameManager gm;
     [SerializeField] private float lookSpeed;
     [SerializeField] private bool moving;
+    public bool dialogueStarted;
 
     public enum State
     {
@@ -118,7 +120,10 @@ public class PlayerController : MonoBehaviour
 
     public void HideDialogue(bool doHide)
     {
-        dialogue.SetActive(doHide);
+        if(dialogueStarted)
+            dialogue.SetActive(doHide);
+        else
+            startButton.SetActive(doHide);
     }
 
     IEnumerator TransitionLook(Transform lookto, bool atTable)

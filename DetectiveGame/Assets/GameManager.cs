@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Rounds; // This is just for testing
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject lostScreen;
+    [SerializeField] private GameObject dialogueManager;
+    [SerializeField] private GameObject dialogue;
+    [SerializeField] private GameObject startButton;
     public float roundTime;
     public float looseScore;
     public float winScore;
@@ -17,20 +20,16 @@ public class GameManager : MonoBehaviour
     public int curInteraction;
     public DialogueCode suspectsDialogue;
     public GameObject wrong;
-
     private ScoreManager score;
-    private PresentZone presentZone;
-    public Transform[] Documents;
-    private Transform correctDoc;
-
     private bool gameEnded = false;
+    private Transform correctDoc;
+    private PlayerController pc;
+
 
     void Start()
     {
         score = this.GetComponent<ScoreManager>();
-        //presentZone = GameObject.FindGameObjectWithTag("PresentZone").GetComponent<PresentZone>();
-
-        RequestRandomDocument();
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -54,15 +53,6 @@ public class GameManager : MonoBehaviour
             else
                 Lose();
         }
-    }
-
-    private void RequestRandomDocument()
-    {
-        var rand = Random.Range(0, Documents.Length);
-        var doc = Documents[rand];
-
-        DocName.text = doc.name;
-        correctDoc = doc;
     }
 
     public void RequestDocument(Transform doc)
@@ -124,5 +114,13 @@ public class GameManager : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void BringinSuspect()
+    {
+        pc.dialogueStarted = true;
+        startButton.SetActive(false);
+        dialogue.SetActive(true);
+        dialogueManager.SetActive(true);
     }
 }
