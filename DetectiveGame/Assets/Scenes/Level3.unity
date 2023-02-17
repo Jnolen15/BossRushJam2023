@@ -507,6 +507,8 @@ GameObject:
   - component: {fileID: 91537195}
   - component: {fileID: 91537194}
   - component: {fileID: 91537197}
+  - component: {fileID: 91537199}
+  - component: {fileID: 91537198}
   m_Layer: 5
   m_Name: Gang Photo
   m_TagString: Untagged
@@ -682,6 +684,72 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &91537198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91537192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Gang Photo
+  description: "An old group photo of the gang that Iceman is a part of. Iceman can
+    be seen standing next to the gingerbread man who is now the victim in today\u2019s
+    case. Iceman seemed to still have his carrot nose at that time. It\u2019s unclear
+    when he lost his carrot nose."
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &91537199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91537192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 91537198}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 91537198}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &109393076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,7 +821,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4509940056956528233, guid: a48866e7ac1472d429e26d514f7fd8b2, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4509940056956528233, guid: a48866e7ac1472d429e26d514f7fd8b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1186,6 +1254,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &227996725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2594858101494978953, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+  m_PrefabInstance: {fileID: 1844225089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &265682852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1352,6 +1425,8 @@ GameObject:
   - component: {fileID: 286623649}
   - component: {fileID: 286623648}
   - component: {fileID: 286623651}
+  - component: {fileID: 286623653}
+  - component: {fileID: 286623652}
   m_Layer: 5
   m_Name: Just A Rabbit
   m_TagString: Untagged
@@ -1527,6 +1602,71 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &286623652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286623646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Rabbit
+  description: "The Iceman\u2019s pet rabbit. We tried to feed it earlier while they
+    were in custody, but Iceman told us the bunny had eaten recently, and didn\u2019t
+    need any food."
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &286623653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286623646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 286623652}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 286623652}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &288232310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,6 +2580,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &534725462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2594858100000204177, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+  m_PrefabInstance: {fileID: 1844225089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &537937838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2599,7 +2744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064196006918140526, guid: 88fff0e02c9610a4bb2ae6d7a435ef0e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6064196006918140526, guid: 88fff0e02c9610a4bb2ae6d7a435ef0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3127,6 +3272,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4957271010909120, guid: a3df36e3c2bb6a145a33cceae077c3a4, type: 3}
   m_PrefabInstance: {fileID: 780356684}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &781692325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2594858101101638478, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+  m_PrefabInstance: {fileID: 1844225089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &812642889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3202,6 +3352,8 @@ GameObject:
   - component: {fileID: 822111594}
   - component: {fileID: 822111593}
   - component: {fileID: 822111596}
+  - component: {fileID: 822111598}
+  - component: {fileID: 822111597}
   m_Layer: 5
   m_Name: Autopsy Report
   m_TagString: Untagged
@@ -3377,6 +3529,70 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &822111597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822111591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Autopsy Report
+  description: The gingerbread man died at around 12:15am last night from blood loss
+    inflicted by a sharp object.
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &822111598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822111591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 822111597}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 822111597}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &864797420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3642,6 +3858,8 @@ GameObject:
   - component: {fileID: 910452438}
   - component: {fileID: 910452437}
   - component: {fileID: 910452440}
+  - component: {fileID: 910452442}
+  - component: {fileID: 910452441}
   m_Layer: 5
   m_Name: Knife
   m_TagString: Untagged
@@ -3817,6 +4035,70 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &910452441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910452435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Knife
+  description: "A combat knife was found at the scene, but there is no blood on it.
+    At least, none that matches the victim or suspect\u2019s DNA."
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &910452442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910452435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 910452441}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 910452441}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &930952865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,6 +4408,8 @@ GameObject:
   - component: {fileID: 1107590452}
   - component: {fileID: 1107590451}
   - component: {fileID: 1107590454}
+  - component: {fileID: 1107590456}
+  - component: {fileID: 1107590455}
   m_Layer: 5
   m_Name: Crime Scene Note
   m_TagString: Untagged
@@ -4301,6 +4585,72 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1107590455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107590449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Crime Scene Note
+  description: "A crumpled piece of paper found at the crime scene. It says \u201CI
+    told Iceman I was done with the gang, and and wanted out. He was not happy with
+    me at all, but I\u2019m committed to this. No more crime for this gingerbread
+    man. I\u2019m gonna be an upright citizen from now on.\u201D"
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &1107590456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107590449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1107590455}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1107590455}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1110115621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6144,6 +6494,8 @@ GameObject:
   - component: {fileID: 1508162682}
   - component: {fileID: 1508162681}
   - component: {fileID: 1508162684}
+  - component: {fileID: 1508162686}
+  - component: {fileID: 1508162685}
   m_Layer: 5
   m_Name: Goon Testimony
   m_TagString: Untagged
@@ -6319,6 +6671,74 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1508162685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508162679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e24a9a5c89b6244a5df3256cd1b7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidence: Goon Testimony
+  description: "Testimony from one of Iceman\u2019s underlings, who was questioned
+    the night of the murder. \u201CIceman, the big boss, and I met up around 11:50pm
+    last night to talk business. At around midnight, the big boss pulled Iceman aside
+    and they talked alone for a minute. I couldn\u2019t hear what they said, but
+    Iceman had to go take a smoke break just after that. Long smoke break. He didn\u2019t
+    make it back until 12:30am.\u201D"
+  evidenceWindow: {fileID: 781692325}
+  evidenceName: {fileID: 227996725}
+  evidenceDescription: {fileID: 534725462}
+  pc: {fileID: 1659416798}
+--- !u!114 &1508162686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508162679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1508162685}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1508162685}
+          m_TargetAssemblyTypeName: EvidenceDescription, Assembly-CSharp
+          m_MethodName: OnMouseOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1517627257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7640,6 +8060,103 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &1844225089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638466, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594858101101638478, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
+      propertyPath: m_Name
+      value: EvidenceWindow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04255b9f45c5bae49853276b662ab1c8, type: 3}
 --- !u!1001 &1928313267
 PrefabInstance:
   m_ObjectHideFlags: 0
