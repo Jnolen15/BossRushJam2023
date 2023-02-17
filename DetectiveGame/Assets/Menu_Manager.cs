@@ -46,7 +46,7 @@ public class Menu_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
             this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
         }
