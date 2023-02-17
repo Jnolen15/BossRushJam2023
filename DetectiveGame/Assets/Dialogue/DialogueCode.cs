@@ -12,8 +12,9 @@ public class DialogueCode : MonoBehaviour
     public GameObject daName;
     public GameObject daDialogue;
     public GameObject daQuestions;
-    public string DaEvidence;
+    //public string DaEvidence;
     public GameObject evidenceWeAreUsing;
+    public GameObject sweat;
     public GameObject[] evidence;
 
 
@@ -141,7 +142,14 @@ public class DialogueCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(holdEvidence != null)
+        {
+            sweat.SetActive(true);
+        }
+        else
+        {
+            sweat.SetActive(false);
+        }
 
     }
     public void OnMouseDownQuestion(GameObject question)
