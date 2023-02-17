@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1649660567075285078
 RectTransform:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7115110071014381415
 Transform:
   m_ObjectHideFlags: 0
@@ -248,23 +248,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6013572219176737751, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Color.a
@@ -1095,23 +1095,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.79998
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6200601231304140590, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Pivot.x
@@ -1356,7 +1356,7 @@ PrefabInstance:
         to the evidence. Holding alt will allow you to look more closely at the evidence.
         Use the scroll wheel while holding a piece of evidence to rotate it.
 
-        
+
 
         From
         the evidence, you can look up at the suspect with W. Begin the case when
@@ -1875,7 +1875,7 @@ PrefabInstance:
     - target: {fileID: 2761605268378204301, guid: f0db5336afaa4174d9ad4c719fb5faf8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2068854782917747533, guid: 3839b7f2c0e1d6349a7a6de9e7711e97, type: 3}
+      objectReference: {fileID: -7045211016023749320, guid: 2b3ed74c2c86e0e45acc09ad4f375271, type: 3}
     - target: {fileID: 8383219882716136642, guid: f0db5336afaa4174d9ad4c719fb5faf8, type: 3}
       propertyPath: m_text
       value: Writing
