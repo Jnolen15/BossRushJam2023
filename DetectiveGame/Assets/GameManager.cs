@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject dialogueManager;
     [SerializeField] private GameObject dialogue;
     [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject reminder;
     public float roundTime;
     public DialogueCode suspectsDialogue;
     public GameObject wrong;
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
         interviewStarted = true;
         pc.dialogueStarted = true;
         startButton.SetActive(false);
+        reminder.SetActive(false);
         dialogue.SetActive(true);
         dialogueManager.SetActive(true);
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().StartTimed();

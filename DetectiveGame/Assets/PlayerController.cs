@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject magCam;
     [SerializeField] private GameObject dialogue;
     [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject reminder;
     [SerializeField] private GameObject table;
     [SerializeField] Transform tPosTable;
     [SerializeField] Transform tPosFull;
@@ -120,10 +121,13 @@ public class PlayerController : MonoBehaviour
 
     public void HideDialogue(bool doHide)
     {
-        if(dialogueStarted)
+        if (dialogueStarted)
             dialogue.SetActive(doHide);
         else
+        {
             startButton.SetActive(doHide);
+            reminder.SetActive(doHide);
+        }
     }
 
     IEnumerator TransitionLook(Transform lookto, bool atTable)
