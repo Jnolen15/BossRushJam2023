@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject dialogue;
     [SerializeField] private GameObject startButton;
     public float roundTime;
-    public float looseScore;
-    public float winScore;
     public DialogueCode suspectsDialogue;
     public GameObject wrong;
+    public int winScore;
+    public int maxStrikes;
     private ScoreManager score;
     private bool gameEnded = false;
     private Transform correctDoc;
@@ -48,15 +48,17 @@ public class GameManager : MonoBehaviour
         else
             Lose();
 
-        // Lose if player score falls below loose threshold
-        if (score.CurScore <= looseScore)
+        // If win score is met
+        if (score.curSuccessNum >= winScore)
+        {
+            Win();
+        }
+
+        // If strikes are full
+        if (score.curStrikeNum == maxStrikes)
         {
             Lose();
         }
-
-        // Win If player score passes the win threshold
-        if (score.CurScore >= winScore)
-            Win();
     }
 
     public void BringinSuspect()

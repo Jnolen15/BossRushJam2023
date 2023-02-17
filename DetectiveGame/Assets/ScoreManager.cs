@@ -6,48 +6,48 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     private GameManager gm;
-    [SerializeField] private Image scorebar;
-    [SerializeField] private Image loosebar;
-    [SerializeField] private Image winbar;
-    [SerializeField] private int maxScore;
-    [SerializeField] private int startScore;
-    [SerializeField] private int scoreAmmount;
-    [SerializeField] private float curScore;
+    [SerializeField] private GameObject strike;
+    [SerializeField] private GameObject strikeZone;
+    [SerializeField] private GameObject curStrike;
+    public int curStrikeNum;
+    public int curSuccessNum;
     [SerializeField] private bool hasLost;
     [SerializeField] private bool hasWon;
-    public float CurScore
-    {
-        get { return curScore; }
-        set
-        {
-            curScore = value;
-            scorebar.fillAmount = curScore / maxScore;
-        }
-    }
 
     void Start()
     {
         gm = this.GetComponent<GameManager>();
 
-        CurScore = startScore;
+        for(int i = 0; i < gm.maxStrikes; i++)
+        {
+            Instantiate(strike, strikeZone.transform);
+        }
 
-        loosebar.fillAmount = gm.looseScore / maxScore;
-        winbar.fillAmount = gm.winScore / maxScore;
+        curStrike = strikeZone.transform.GetChild(curStrikeNum).gameObject;
     }
 
     public void Succeeded()
     {
-        CurScore += scoreAmmount;
-
-        if (CurScore > maxScore)
-            CurScore = maxScore;
+        curStrike.transform.GetChild(0).gameObject.SetActive(true);
+        curStrikeNum++;
+        curSuccessNum++;
+        if (curStrikeNum < gm.maxStrikes)
+            curStrike = strikeZone.transform.GetChild(curStrikeNum).gameObject;
+        // If its the last strike and the player has no won, give them an extra chance
+        else if (curSuccessNum < gm.winScore)
+        {
+            Debug.Log("Another Chance!");
+            Instantiate(strike, strikeZone.transform);
+            gm.maxStrikes++;
+            curStrike = strikeZone.transform.GetChild(curStrikeNum).gameObject;
+        }
     }
 
     public void Failed()
     {
-        CurScore -= scoreAmmount;
-
-        if (CurScore < 0)
-            CurScore = 0;
+        curStrike.transform.GetChild(1).gameObject.SetActive(true);
+        curStrikeNum++;
+        if(curStrikeNum < gm.maxStrikes)
+            curStrike = strikeZone.transform.GetChild(curStrikeNum).gameObject;
     }
 }
