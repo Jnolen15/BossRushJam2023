@@ -342,8 +342,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -156.20001, y: 124.100006}
-  m_SizeDelta: {x: -430.0735, y: -270.8882}
+  m_AnchoredPosition: {x: -115.88838, y: 124.100006}
+  m_SizeDelta: {x: -349.4503, y: -270.8882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &341312734576137754
 CanvasRenderer:
@@ -746,6 +746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Highlight: {fileID: 8514847754238437100}
   FolderCover: {fileID: 3860312234619971320}
+  FolderOn: 1
+  FolderOpenCall: 1
 --- !u!61 &4783567207385654554
 BoxCollider2D:
   m_ObjectHideFlags: 0

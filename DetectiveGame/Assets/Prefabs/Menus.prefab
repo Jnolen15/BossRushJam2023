@@ -361,6 +361,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1649660567075285078}
     m_Modifications:
+    - target: {fileID: 348888622570814460, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_text
+      value: VOLUME
+      objectReference: {fileID: 0}
     - target: {fileID: 1637508205683679695, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -469,6 +473,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3860312234619971320, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7509977180182224895, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -538,7 +546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 348888622570814460, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_text
-      value: The Usual Suspects
+      value: THE USUAL SUSPECTS
       objectReference: {fileID: 0}
     - target: {fileID: 617150710393576077, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_Text
@@ -722,6 +730,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1649660567977790869}
     m_Modifications:
+    - target: {fileID: 348888622570814460, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_text
+      value: 60 SECOND DETECTIVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 348888622570814460, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2643500817857488173, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
@@ -739,6 +755,10 @@ PrefabInstance:
     - target: {fileID: 3250553993474312844, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_Name
       value: Tutorial Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250553993474312844, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3344901192129737484, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_Name
@@ -830,7 +850,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860312234619971320, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432276286918087550, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432276286918087550, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432276286918087550, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8867924
       objectReference: {fileID: 0}
     - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -859,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 4720582662431167244, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571479854400776692, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 298.84
       objectReference: {fileID: 0}
     - target: {fileID: 7509977180182224895, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_Name
@@ -1051,6 +1087,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7115110071014381415}
     m_Modifications:
+    - target: {fileID: 348888622570814460, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_text
+      value: CASE INSTRUCTIONS
+      objectReference: {fileID: 0}
     - target: {fileID: 2173010789551356901, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_text
       value: GET GUDE

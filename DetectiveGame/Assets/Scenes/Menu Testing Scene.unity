@@ -7257,10 +7257,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1311468680835755750, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
-      propertyPath: m_text
-      value: Volume
-      objectReference: {fileID: 0}
     - target: {fileID: 1503638286898031285, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
       propertyPath: m_Enabled
       value: 0
