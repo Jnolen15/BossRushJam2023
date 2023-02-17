@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1649660567075285078
 RectTransform:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7115110071014381415
 Transform:
   m_ObjectHideFlags: 0
@@ -248,23 +248,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013572219176737751, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Color.a
@@ -1095,23 +1095,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 666114196576317640, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.79998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802641954547756656, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6200601231304140590, guid: c84d5ba6b495f6a4f88ddae23233e2db, type: 3}
       propertyPath: m_Pivot.x
@@ -1354,24 +1354,27 @@ PrefabInstance:
         interrogation starts to review the case evidence. Start by looking down at
         the evidence with S. Mousing over the evidence will reveal information related
         to the evidence. Holding alt will allow you to look more closely at the evidence.
+        Use the scroll wheel while holding a piece of evidence to rotate it.
 
+        
 
         From
         the evidence, you can look up at the suspect with W. Begin the case when
         you''re ready, but be warned, you have only 60 seconds to prove the suspect
-        is guilty, or else they get off scot free. You can prove the suspect is guilty
+        is guilty, or else they get off scot-free. You can prove the suspect is guilty
         by presenting evidence to disprove specific parts of their alibi. Present
-        evidence by dragging it over to the suspect. Watch the suspect carefully
-        as they tell you their story, they might get visibly nervous while telling
-        you a lie that can be disproven with the evidence before you.'
+        evidence by dragging it over to the suspect; make sure you are presenting
+        evidence to the exact part of their story where they tell a lie. Watch the
+        suspect carefully as they tell you their story, they might get visibly nervous
+        while telling you a lie that can be disproven with the evidence before you.'
       objectReference: {fileID: 0}
     - target: {fileID: 2173010789551356901, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_fontSize
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2173010789551356901, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_fontSizeBase
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3250553993474312844, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
@@ -1480,6 +1483,22 @@ PrefabInstance:
     - target: {fileID: 3860312234619971320, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879585865982391143, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 470.744
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879585865982391143, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 238.4118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879585865982391143, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.8281
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879585865982391143, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.9807
       objectReference: {fileID: 0}
     - target: {fileID: 7509977180182224895, guid: ddf17c9dc4ef22648b0d263d66576b17, type: 3}
       propertyPath: m_IsActive
