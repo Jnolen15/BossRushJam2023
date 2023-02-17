@@ -2906,6 +2906,7 @@ MonoBehaviour:
   magCam: {fileID: 0}
   dialogue: {fileID: 0}
   startButton: {fileID: 0}
+  reminder: {fileID: 0}
   table: {fileID: 914581239}
   tPosTable: {fileID: 1210327755}
   tPosFull: {fileID: 272141674}
@@ -6249,6 +6250,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   dialogue: {fileID: 0}
   startButton: {fileID: 0}
+  reminder: {fileID: 0}
+  clock: {fileID: 0}
   roundTime: 100
   suspectsDialogue: {fileID: 0}
   wrong: {fileID: 1229098467}
@@ -7257,6 +7260,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1376773264977450259, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 1503638286898031285, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7416,6 +7423,10 @@ PrefabInstance:
     - target: {fileID: 3233078442778585533, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400197297735938150, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4075683318441444637, guid: 1ceee5953a6c4674a899864b6ef3c0a2, type: 3}
       propertyPath: m_AnchoredPosition.y
