@@ -23,13 +23,14 @@ public class GameManager : MonoBehaviour
     private bool gameEnded = false;
     private Transform correctDoc;
     private PlayerController pc;
-    private bool interviewStarted;
+    public bool interviewStarted;
     [SerializeField] private AudioSource winSound;
     [SerializeField] private AudioSource loseSound;
 
-
     void Start()
     {
+        Time.timeScale = 1;
+
         score = this.GetComponent<ScoreManager>();
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }

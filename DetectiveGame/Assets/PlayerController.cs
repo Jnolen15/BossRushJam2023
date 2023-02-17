@@ -56,10 +56,19 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(heldEvidence.transform.localPosition.y);
             if (heldEvidence.transform.localPosition.y > 400f)
             {
-                Debug.Log("EVIDENCE SUBMITED");
-                gm.SubmitDocument(heldEvidence);
-                heldEvidence.transform.localPosition = new Vector3(0, 0, 0);
-                DropEvidence();
+                if (gm.interviewStarted)
+                {
+                    Debug.Log("EVIDENCE SUBMITED");
+                    gm.SubmitDocument(heldEvidence);
+                    heldEvidence.transform.localPosition = new Vector3(0, 0, 0);
+                    DropEvidence();
+                }
+                else
+                {
+                    Debug.Log("INTERVIEW NOT STARTED, RESETING EVIDENCE");
+                    heldEvidence.transform.localPosition = new Vector3(0, 0, 0);
+                    DropEvidence();
+                }
             }
         }
     }
@@ -132,6 +141,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TransitionLook(Transform lookto, bool atTable)
     {
+        Debug.Log("IN TRANSITION");
+
         if (!atTable)
             Camera.main.orthographic = atTable;
         else
@@ -145,6 +156,7 @@ public class PlayerController : MonoBehaviour
 
         while (time < lookSpeed)
         {
+            Debug.Log("IN LERP");
             float t = time / lookSpeed;
             t = t * t * (3f - 2f * t);
 
