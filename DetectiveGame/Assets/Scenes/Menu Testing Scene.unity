@@ -1862,7 +1862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654877008}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6224,13 +6224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96754759a0d6cc649a7acd28a194b81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorebar: {fileID: 268155797}
-  loosebar: {fileID: 1824507783}
-  winbar: {fileID: 2040057254}
-  maxScore: 100
-  startScore: 50
-  scoreAmmount: 0
-  curScore: 0
+  strike: {fileID: 0}
+  strikeZone: {fileID: 0}
+  curStrike: {fileID: 0}
+  curStrikeNum: 0
+  curSuccessNum: 0
   hasLost: 0
   hasWon: 0
 --- !u!114 &1909512633
@@ -6252,10 +6250,12 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   startButton: {fileID: 0}
   roundTime: 100
-  looseScore: 25
-  winScore: 75
   suspectsDialogue: {fileID: 0}
   wrong: {fileID: 1229098467}
+  winScore: 75
+  maxStrikes: 0
+  winSound: {fileID: 0}
+  loseSound: {fileID: 0}
 --- !u!4 &1909512634
 Transform:
   m_ObjectHideFlags: 0
