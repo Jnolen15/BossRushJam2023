@@ -194,7 +194,7 @@ public class DialogueCode : MonoBehaviour
     {
 
         //If we are at the end of the dialouge than return to the first line
-        Debug.Log(forNormalLines);
+        //Debug.Log(forNormalLines);
         checkCurrentPhase = "Normal";
         daName.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhase].dialogueClasses[nextLine].name;
         //daDialogue.GetComponent<TextMeshProUGUI>().text = allPhases[currentPhaseCounter].dialogueClasses[nextLine].sentences;

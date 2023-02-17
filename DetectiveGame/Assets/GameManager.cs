@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject dialogue;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject reminder;
+    [SerializeField] private GameObject clock;
     public float roundTime;
     public DialogueCode suspectsDialogue;
     public GameObject wrong;
@@ -43,6 +44,8 @@ public class GameManager : MonoBehaviour
         if (roundTime > 0)
         {
             roundTime -= Time.deltaTime;
+            int forClock = Mathf.RoundToInt(roundTime);
+            clock.GetComponent<TextMeshPro>().text = forClock.ToString();
             //CurScore -= Time.deltaTime;
         }
         // If time runs out, Lose
