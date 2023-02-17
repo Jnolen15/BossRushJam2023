@@ -10,6 +10,7 @@ public class Menu_Manager : MonoBehaviour
     public GameObject MainMenu;
     public GameObject SettingsMenu;
     public GameObject CreditsMenu;
+    public GameObject CreditsMenu2;
     public bool moving = true;
     public Transform CameraWide;
     public Camera MainCam;
@@ -22,6 +23,7 @@ public class Menu_Manager : MonoBehaviour
         MainMenu.SetActive(true);
         SettingsMenu.SetActive(true);
         CreditsMenu.SetActive(true);
+        CreditsMenu2.SetActive(true);
 
         // TransitionLook(CameraWide);
     }
